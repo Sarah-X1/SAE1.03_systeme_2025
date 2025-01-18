@@ -12,17 +12,57 @@
   <header>
     <img src="assets/image/virtualbox_logo.png" alt="Logo VirtualBox" height="150" width="150"> <!-- Création de l'image du logo -->
   </header>
-  <nav> <!-- Création de la barre de navigation-->
-    <a href="index.html">Introduction au travail</a>
-    <div class="menu">
-      <a>Machine blabla</a>
-      <div class="contenu_menu">
-        <a href="creationMV.html">Création MV</a>
-        <a href="utilisationMV.html">Utilisation MV</a>
-        <a href="configurationWebDeploiement.html"> Configuration web ,deploiement</a>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mon Site</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- Menu Déroulant 1 : Intro -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownIntro" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Intro
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownIntro">
+              <li><a class="dropdown-item" href="intro.html">Présentation</a></li>
+              <li><a class="dropdown-item" href="objectifs.html">Objectifs</a></li>
+            </ul>
+          </li>
+          <!-- Menu Déroulant 2 : Création MV -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCreation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Création MV
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownCreation">
+              <li><a class="dropdown-item" href="creation.html">Éléments nécessaires</a></li>
+              <li><a class="dropdown-item" href="outils.html">Outils de création</a></li>
+            </ul>
+          </li>
+          <!-- Menu Déroulant 3 : Utilisation MV -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtilisation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Utilisation MV
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownUtilisation">
+              <li><a class="dropdown-item" href="demarrage.html">Démarrage</a></li>
+              <li><a class="dropdown-item" href="configuration.html">Configuration</a></li>
+            </ul>
+          </li>
+          <!-- Menu Déroulant 4 : Déploiement -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDeploiement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Déploiement
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownDeploiement">
+              <li><a class="dropdown-item" href="plateforme.html">Choix d'une plateforme</a></li>
+              <li><a class="dropdown-item" href="mettre-en-ligne.html">Mettre en ligne</a></li>
+            </ul>
+          </li>
+        </ul>
       </div>
     </div>
-    <a href="conclusion.html">Conclusion</a>
   </nav>
   </div>
   <div class="presentation">
