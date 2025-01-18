@@ -112,8 +112,17 @@ nav a:hover, .contenu_menu a:hover { /* Pour les onglets de la barre de navigati
     margin : 100px;
 }
 
+.diagrammeGantt{
+    margin : 110px  110px 0 110px;
+}
+
+.diagrammeGantt h1{
+    font-size : 30px;
+}
+
+
 .type_virtualisation h1{
-    font-size : 40px;
+    font-size : 35px;
 }
 
 .type_virtualisation{
