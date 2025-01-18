@@ -199,3 +199,15 @@
 .creation_admin p{
     font-size : 25px;
 }
+
+.creation_utilisateurs{
+    margin : 110px  110px 0 110px;
+}
+
+.creation_utilisateurs h1{
+    font-size : 30px;
+}
+
+.creation_utilisateurs p{
+    font-size : 25px;
+}
