@@ -1,101 +1,79 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: century;
+/* Placement de la barre de navigation qui fonctionne comme une grille */
+nav {
+    background-color: #87CEFA;
+    padding: 10px;
+    margin: 5px;
+    height : auto;
+    display: grid; /* Fonctionne désormais comme une grille */
+    text-align: center;
+    border-radius: 15px; /* "Arrondi" les coins de la barre de navigation */
+    grid-template-columns: auto auto auto;
 }
 
-header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./74561d2c-32aa-4794-8c8e-d6a55e244bab.jpeg);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-} 
-
-.logo a{
-    color: #ff0000;
-    padding: 0px 20px;
-    border: 1px solid #f80000;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 900;
-    text-shadow: rgba(0, 0, 0, 0.7);
+/* Modification des textes présents dans les différents onglets de la nav (exemple : Accueil) */
+nav a {
+    color: white;
+    padding: 20px;
+    display: block;
+    text-decoration: none; /* Permet de retirer le soulignement du texte dû à la balise a */
 }
 
-.logo span{
-    color: rgb(238, 56, 11);
-    font-weight: bolder;
-    font-size: 2rem;
+/* Modification du fonctionnement de la class menu */
+.menu{
+    position: relative;
+    display: inline-block; /* Permet de créer la barre de navigation sans faire dépasser le menu déroulant, créer une boite en ligne  */
 }
 
-ul{
-    list-style: none;
-    float: right;
-    display: flex;
-    margin-top: 20px;
+/* Modification du fonctionnement de contenu_menu qui permet la redirection vers les 3 missions */
+.contenu_menu {
+    display: none; /* Permet à la barre de navigation de fonctionner avec le hover */
+    position: absolute; /* Position absolute pour permettre un placement arbitraire */
+    background-color: grey;
+    min-width: 160px; /* Permet d'aggrandir la taille du menu déroulant */
 }
 
-ul li a{
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    border: 1px solid transparent;
-    margin: 10px;
-    font-weight: 500;
-    transition: 0.6s ease;
+/* Modification du texte présent dans la barre de navigation*/
+.contenu_menu a {
+    color: white;
+    padding: 10px;
+    text-decoration: none; /* Permet de retirer le soulignement du texte dû à la balise a */
+    display: block; /* Fonctionne désormais comme un block */
 }
 
-ul li a:hover{
-    background: #fff;
-    color: #000;
+/* Modification du fonctionnement du menu */
+.menu:hover .contenu_menu { /* Utilisation de la pseudo-class hover pour permettre l'effet de "survol" du menu */
+    display: block;
 }
 
-ul li.active a{
-    background: #fff;
-    color: #000;
-     
+nav a:hover, .contenu_menu a:hover { /* Pour les onglets de la barre de navigation et les onglets du menu déroulant */
+    border-radius: 15px; /* "Arrondi" les coins de la zone de survol */
+    background-color: #e6f2ff; /* Change la couleur de l'intérieur de l'onglet quand ce dernier est survolé */
 }
 
-.principale{
-    max-width: 114rem;
-    margin: 0 auto;
-}
-.titre{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.tableau_difference caption{
+    font-family : "Agency FB";
+    text-decoration: underline #87CEFA;
+    text-align : center;
+    font-size : 40px;
+    margin : 0px 0 20px 0;
 }
 
-.titre h1{
-    color: #fff;
-    font-size: 70px;
+.tableau_difference table{
+    width: 95%;
+    display : block;
 }
 
-.bouton {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.tableau_difference th, td {
+    padding: 15px 15px;
+    text-align: center;
+    border: 1px solid #ddd;
 }
 
-.bouton a{
-    color: #fff;
-    text-decoration: none;
-    border: 1px solid #fff;
-    padding: 10px 20px;
+.tableau_difference th {
+    background-color: #87CEFA;
+    color: white;
 }
-
-.btn{
-    transition: 00.6s ease;
-}
-
-.btn:hover{
-    background-color: #fff;
-    color: #000;
+.tableau_difference tr {
+    background-color: #e6f2ff;
 }
 
