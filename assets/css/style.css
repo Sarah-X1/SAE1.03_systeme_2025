@@ -1,17 +1,38 @@
 
-/* Style personnalisé */
-.nav-link {
-    font-size: 1.2rem;
+*{
+    background-color : #D9E8F5;
 }
-.navbar-nav {
-    flex-direction: row;
-}
-.nav-item {
-    margin-right: 20px;
-}
+
+/* Agrandir le logo */
 .navbar-brand img {
-    width: 40px; /* Vous pouvez ajuster la taille de votre logo ici */
+    width: 60px;  /* Logo plus grand */
     height: auto;
+}
+
+/* Alignement du menu à droite */
+.navbar-nav {
+    margin-left: 20px;  /* Réduire l'espace entre le logo et le menu */
+}
+
+/* Agrandir la taille des liens dans la navbar */
+.nav-link {
+    font-size: 2rem;  /* Augmenter la taille du texte des liens */
+    padding: 0.5rem 1rem;  /* Réduire légèrement le padding pour éviter un espacement trop large */
+}
+
+/* Espacement entre les éléments de la navbar */
+.navbar-nav .nav-item {
+    margin-right: 20px;  /* Espacement ajusté entre les onglets */
+}
+
+/* Ajouter un peu plus de hauteur aux éléments du menu */
+.navbar {
+    padding: 1rem;  /* Espacement général de la barre */
+}
+
+/* Agrandir la police du texte du menu déroulant */
+.dropdown-item {
+    font-size: 1rem;  /* Taille de la police dans les éléments du menu déroulant */
 }
 
 .presentation{
