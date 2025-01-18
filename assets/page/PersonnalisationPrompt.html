@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Machine Virtuelle</title>
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <!-- Logo à gauche -->
+    <a class="navbar-brand" href="#">
+      <img src="../image/virtualbox_logo.png" alt="Logo"> <!-- Remplacez ce lien par l'URL de votre logo -->
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Lien simple vers Introduction -->
+        <li class="nav-item">
+          <a class="nav-link" href="../../index.html">
+            Introduction au travail
+          </a>
+        </li>
+        <!-- Lien simple vers Création MV -->
+        <li class="nav-item">
+          <a class="nav-link" href="creationMV.html">
+            Création MV
+          </a>
+        </li>
+        <!-- Menu déroulant Utilisation MV -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtilisation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Utilisation MV
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownUtilisation">
+            <li><a class="dropdown-item" href="creationAdmin.html">Création administrateur</a></li>
+            <li><a class="dropdown-item" href="creationUtilisateurs.html">Création d'utilisateurs</a></li>
+            <li><a class="dropdown-item" href="creationGroupe.html">Création groupe</a></li>
+            <li><a class="dropdown-item" href="personnalisationPrompt.html">Personnalisation Prompt</a></li>
+          </ul>
+        </li>
+        <!-- Lien simple vers Déploiement -->
+        <li class="nav-item">
+          <a class="nav-link" href="assets/page/deploiement.html">
+            Déploiement MV
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Scripts Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@"></script>
+<div class="prompt_personnalise">
+  <h1>Personnalisation d’une invite de commande (prompt) paramétrée avec le nom de l’utilisateur :</h1>
+  <p>
+    On applique la personnalisation à tous les utilisateurs utilisant bash, on modifie le fichier de configuration global /etc/bash.bashrc. Cela affectera tous les utilisateurs qui utilisent Bash.
+  </p>
+  <p>
+    <br>Ouvrir le fichier global /etc/bash.bashrc (nécessite des privilèges root).
+  </p>
+  <img src="../image/screen_prompt.PNG" alt="configVirtualBox">
+
+  </p>
+  <p>
+    <br>On arrive dans le fichier :
+  </p>
+  <img src="../image/screen_prompt2.PNG" alt="configVirtualBox">
+
+  </p>
+  <p>
+    <br>
+    On peut écrire export PS1='[\u] 'à la fin du fichier bash à la place d’écrire seulement PS1='[\u] '.<br>
+    export PS1='[\u] ' : Définit l'invite de commande et rend cette variable d'environnement accessible à tous les processus enfants.<br>
+    PS1='[\u] ' : Modifie l'invite de commande uniquement dans le shell actuel, sans l'exporter aux processus enfants.<br>
+    export est utilisé pour rendre une variable disponible à tous les sous-processus et garantir que cette variable d'environnement (comme PS1) soit utilisée par les processus enfants.<br>
+    Sans export, la variable est disponible uniquement dans le shell actuel et ne sera pas propagée aux sous-shells ou processus enfants.<br><br>
+    Pour une personnalisation simple de l'invite de commande dans un terminal interactif, vous pouvez modifier PS1 sans export, mais pour rendre cette variable accessible aux processus enfants, il est recommandé d'utiliser export.
+
+
+    Écrire la ligne export PS1='[\u]$ ' à la fin de ~/.bashrc  pour avoir le nom de l’utilisateur :
+  </p>
+  <img src="../image/screen_prompt3.PNG" alt="configVirtualBox">
+  <p>
+    Appuyer sur Ctrl + O pour enregistrer.<br><br>
+  </p>
+  <img src="../image/screen_prompt4.PNG" alt="configVirtualBox">
+  <p>
+    <br>Appuyer sur Entrée pour confirmer le nom du fichier.
+  </p>
+  <img src="../image/screen_prompt5.PNG" alt="configVirtualBox">
+  <p>
+    <br>Appuyer sur Ctrl + X pour quitter l'éditeur :
+  </p>
+  <p>
+    <br>Pour appliquer les changements :
+  </p>
+  <img src="../image/screen_prompt6.PNG" alt="configVirtualBox">
+
+  <p>
+    <br><br>Ainsi on peut voir ci-dessous la personnalisation de l’invite de commande (prompt) paramétrée avec le nom de l’utilisateur :
+  </p>
+  <img src="../image/screen_prompt7.PNG" alt="configVirtualBox">
+
+  <p>
+    <br>Après avoir fermer le terminale, si on va sur un autre utilisateur Binome01_2, il suffit de taper la même commande source pour également appliquer le changement :
+  </p>
+  <img src="../image/screen_prompt8.PNG" alt="configVirtualBox">
+
+  <p>
+    <br>Si on va sur Sarah :
+  </p>
+  <img src="../image/screen_prompt9.PNG" alt="configVirtualBox">
+  <p>
+    Cela marche pour tous les utilisateurs.<br>
+  </p>
+
+  <p>
+    Cependant, cela ne sera valable que pour la session en cours. Une fois que vous fermez le terminal ou ouvrez une
+    nouvelle session, le changement sera perdu. Le fichier bash comportera toujours export PS1=‘[\u] ‘ donc il faudra
+    juste appliquer le changement avec en tapant la commande source /etc/bash.bashrc.<br>
+  </p>
+
+  <p>
+    <br>Autre possibilité :<br>
+    Rendre le changement de l’invite de commande permanent pour un utilisateur :<br>
+    Le fichier .bashrc est le fichier de configuration qui contient des paramètres pour le terminal de notre
+    utilisateur.<br>
+    Il est exécuté chaque fois qu’on ouvre un nouveau terminal.
+    Chaque utilisateur possède un fichier .bashrc dans son répertoire personnel.
+    Ouvrir le fichier .bashrc de l’utilisateur avec un éditeur de texte : nano ~/.bashrc<br>
+    On écrit PS1='[\u] 'à la fin du fichier bash :
+    <img src="../image/screen_prompt10.PNG" alt="configVirtualBox">
+  </p>
+  <p>
+    <br>Pour appliquer les modifications apportées à .bashrc sans redémarrer le terminal, vous devez recharger le fichier .bashrc avec la commande source : <br>source ~/.bashrc
+  </p>
+  <p>
+    <br>Après avoir appuyer sur la touche entrez, on voit que le changement est appliqué : <br>
+  </p>
+  <img src="../image/screen_prompt11.PNG" alt="configVirtualBox">
+  <p>
+    <br>Puis on quitte le terminal et on le rouvre, on voit que l’invite de commande est restée personnalisée.<br><br>
+  </p>
+</div>
+<!-- Pied de page -->
+<footer class="bg-dark text-light py-4 mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h1>Coordonnées</h1>
+        <p>
+          <a href="https://www.google.com/maps/search/?q=123+Rue+de+l'Entreprise,+75000+Paris,+France" target="_blank">123 Rue de l'Entreprise, 75000 Paris, France</a><br>
+          Téléphone : 01 23 45 67 89<br>
+          Email : <a href="mailto:info@entreprise.fr">info@entreprise.fr</a>
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h1>À propos</h1>
+        <p>
+          Ce site est réalisé par les étudiants de l'IUT de Paris : Afshar MOHAMED AJMALDEEN, Johann TIXIER, Dany LIM, Sarah XU
+        </p>
+      </div>
+      <div class="col-md-4">
+        <h5>Suivez-nous</h5>
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/entreprise" target="_blank"><img src="assets/image/facebook.png" height = "50" width = "50" alt = "logo facebook"></a></li>
+          <li><a href="https://www.twitter.com/entreprise" target="_blank"><img src="assets/image/twitter.png" height = "50" width = "50" alt="logo X"></a></li>
+          <li><a href="https://www.instagram.com/entreprise" target="_blank"><img src="assets/image/instagram.png" height = "50" width = "50" alt="logo Insta"></a></li>
+          <li><a href="https://www.linkedin.com/company/entreprise" target="_blank"><img src="assets/image/linkedin.png" height = "50" width = "50" alt="logo linkdin"></a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-light">
+    <div class="text-center">
+      <p>&copy; 2025 Mon Site Web. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
