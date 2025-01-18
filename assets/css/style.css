@@ -1,8 +1,4 @@
 
-*{
-    background-color : #D9E8F5;
-}
-
 /* Agrandir le logo */
 .navbar-brand img {
     width: 60px;  /* Logo plus grand */
