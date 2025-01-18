@@ -211,3 +211,15 @@
 .creation_utilisateurs p{
     font-size : 25px;
 }
+
+.prompt_personnalise{
+    margin : 110px  110px 0 110px;
+}
+
+.prompt_personnalise h1{
+    font-size : 30px;
+}
+
+.prompt_personnalise p{
+    font-size : 25px;
+}
