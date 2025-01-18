@@ -164,3 +164,38 @@
     margin : 0 0 100px 50px;
 }
 
+.installation_mv{
+    margin : 110px  110px 0 110px;
+}
+
+.installation_mv h1{
+    font-size : 30px;
+}
+
+.installation_mv p{
+    font-size : 25px;
+}
+
+.configuration_mv{
+    margin : 110px  110px 0 110px;
+}
+
+.configuration_mv h1{
+    font-size : 30px;
+}
+
+.configuration_mv p{
+    font-size : 25px;
+}
+
+.creation_admin{
+    margin : 110px  110px 0 110px;
+}
+
+.creation_admin h1{
+    font-size : 30px;
+}
+
+.creation_admin p{
+    font-size : 25px;
+}
