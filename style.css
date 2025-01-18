@@ -24,6 +24,12 @@ nav a {
     display: inline-block; /* Permet de créer la barre de navigation sans faire dépasser le menu déroulant, créer une boite en ligne  */
 }
 
+nav .menu {
+    color : white;
+    display: block;
+    text-decoration: none; /* Permet de retirer le soulignement du texte dû à la balise a */
+}
+
 /* Modification du fonctionnement de contenu_menu qui permet la redirection vers les 3 missions */
 .contenu_menu {
     display: none; /* Permet à la barre de navigation de fonctionner avec le hover */
@@ -32,13 +38,7 @@ nav a {
     min-width: 160px; /* Permet d'aggrandir la taille du menu déroulant */
 }
 
-/* Modification du texte présent dans la barre de navigation*/
-.contenu_menu a {
-    color: white;
-    padding: 10px;
-    text-decoration: none; /* Permet de retirer le soulignement du texte dû à la balise a */
-    display: block; /* Fonctionne désormais comme un block */
-}
+
 
 /* Modification du fonctionnement du menu */
 .menu:hover .contenu_menu { /* Utilisation de la pseudo-class hover pour permettre l'effet de "survol" du menu */
