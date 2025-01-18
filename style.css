@@ -1,6 +1,28 @@
+/*************************DEBUT de Haut de page****************************/
+
+html, body {
+    margin : 0; /* Nécessaire pour le bon fonctionnement du footer */
+    padding : 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Remplissage de l'espace */
+body, main {
+    flex: 1;
+}
+
+body {
+    background-color : #FAF0E6; /* Couleur de fond beige pour toutes les pages */
+}
+
+header{
+    text-align: center;
+}
 /* Placement de la barre de navigation qui fonctionne comme une grille */
 nav {
-    background-color: #87CEFA;
+    background-color: #2b6f29;
     padding: 10px;
     margin: 5px;
     height : auto;
@@ -47,33 +69,460 @@ nav a {
 
 nav a:hover, .contenu_menu a:hover { /* Pour les onglets de la barre de navigation et les onglets du menu déroulant */
     border-radius: 15px; /* "Arrondi" les coins de la zone de survol */
-    background-color: #e6f2ff; /* Change la couleur de l'intérieur de l'onglet quand ce dernier est survolé */
+    background-color: #1f4f1e; /* Change la couleur de l'intérieur de l'onglet quand ce dernier est survolé */
 }
+/*************************FIN de Haut de page****************************/
 
-.tableau_difference caption{
-    font-family : "Agency FB";
-    text-decoration: underline #87CEFA;
+
+/*********************************** DEBUT de la Page d'accueil ***********************************
+
+/*************************DEBUT de Présentation du groupe******************/
+/* Modification du texte "Présentation du groupe" qui fonctionne comme titre (centré,souligné et plus grand) */
+.presentation_groupe h1{
     text-align : center;
-    font-size : 40px;
-    margin : 0px 0 20px 0;
+    text-decoration : underline darkolivegreen;
+    font-size : 50px;
+    font-family : "Agency FB";
+    margin: 70px 0px 0px 0px;
 }
 
-.tableau_difference table{
-    width: 95%;
-    display : block;
+/* Modification du texte présent avant la liste à puces */
+.presentation_groupe p{
+    font-family : Consolas;
+    font-size : 25px;
+    color : darkolivegreen;
+    margin : 50px 0 0 25px;
 }
 
-.tableau_difference th, td {
-    padding: 15px 15px;
+/* Modification des éléments, le texte de la liste ordonnée */
+.presentation_groupe ol{
+    font-family : Consolas;
+    font-size : 20px;
+    margin : 10px 0 0 25px;
+}
+/*************************FIN de Présentation du groupe********************/
+
+/*************************DEBUT de Introduction du travail*****************/
+/* Modification du texte "Introduction du travail" qui fonctionne comme titre (centré,souligné et plus grand) */
+.introduction_travail h1{
+    font-family : "Agency FB";
+    text-decoration: underline darkolivegreen;
+    text-align : center;
+    font-size : 50px;
+    margin : 100px 0 0 500px;
+}
+
+/* Modification du texte d'introduction au travail*/
+.introduction_travail p{
+    font-family : Consolas;
+    font-size : 25px;
+    margin : 50px 0 0px 25px;
+}
+
+/* Modification en rouge de tous les textes soulignés */
+.introduction_travail u{
+    color : red;
+}
+
+.introduction_travail {
+    position: relative; /* Position relative puis padding-right pour permettre d'inclure une image à sa droite */
+    padding-right: 500px;
+}
+
+.introduction_travail img {
+    position: absolute; /* Position absolute pour permettre un placement arbitraire */
+    top: 80px;
+    right: 80px;
+    width: 350px;
+    height: 352px;
+}
+
+.introduction_travail p {
+    margin : 50px 0 300px 25px; /* On recentre le texte après l'inclusion de l'image à sa droite */
+}
+/*************************FIN de Introduction du travail*******************/
+
+/***********************************DEBUT de la Page d'accueil ***********************************/
+
+
+/*************************DEBUT de la page "Travail sur KDou"************************/
+
+/*************************FIN de la page "Travail sur KDou"**************************/
+
+/**************************Début de la Mission 1 ************************************/
+
+/****Contexte****/
+.mission1 .texte h1{
+    font-family : "Agency FB";
+    font-size: 50px;
     text-align: center;
-    border: 1px solid #ddd;
+    text-decoration: underline;
 }
 
-.tableau_difference th {
-    background-color: #87CEFA;
+.mission1 .texte .contexte{
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    font-family : "sans-serif";
+}
+
+/**** Requêtes ****/
+.requete1, .requete2, .requete3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.requete1, .requete2, .requete3 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    padding: 20px;
+    gap: 30px;
+}
+.requete1 .ei1, .requete2 .ei2, .requete3 .ei3 {
+    border: 2px solid black;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+/*Application de l'élément detail et son enfant summary*/
+details > summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+/*Ajout du contenue avant le contenue principale*/
+details > summary::before {
+    content: '▶';
+    margin-right: 8px;
+}
+
+ /*Lorsqu'il est ouvert, ajout du contenue avant le contenue principale*/
+details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+/****Perspective d'amélioration et conclusion****/
+.amelioration {
+    display: flex;
+    text-align: center;
+    font-size: 1.3em;
+}
+.conclusion {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5em;
+}
+/**************************Fin de la Mission 1 ************************************/
+
+
+
+/**************************Début de la Mission 2 ************************************/
+/*Application de l'élément detail et son enfant summary*/
+details > summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+
+/*Ajout du contenue avant le contenue principale*/
+details > summary::before {
+    content: '▶';
+    margin-right: 8px;
+}
+
+ /*Lorsqu'il est ouvert, ajout du contenue avant le contenue principale*/
+details[open] > summary::before {
+    transform: rotate(90deg);
+}
+
+/****Titre****/
+.mission2 .contenu_m2 h1{
+    font-family : "Agency FB";
+    font-size: 50px;
+    text-align: center;
+    text-decoration: underline;
+}
+/*Contexte*/
+.mission2 .contenu_m2 .contexte_m2{
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2em;
+    font-family : "sans-serif";
+}
+
+/**** Légende ****/
+.sql_m2{
+    color: darkblue;
+}
+.qbe_m2{
+    color: red;
+}
+.reponse_m2{
+    color: green;
+}
+
+/**** Requêtes ****/
+.requete1_m2, .requete2_m2, .requete3_m2, .requete4_m2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 50px;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+/**/
+.container1_m2, .container2_m2, .container2_m2, .container3_m2, .container4_m2 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Enoncé/Interprétation */
+.ei1_m2, .ei2_m2, .ei3_m2, .ei4_m2{
+    border: 2px solid black;
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+/*SQL*/
+.SQL1_m2, .SQL2_m2, .SQL3_m2, .SQL4_m2{
+    font-size: 1.2em;
+    border: 2px solid darkblue;
+    margin: 5px;
+    padding: 10px;
+}
+
+/*QBE*/
+.QBE1_m2, .QBE2_m2, .QBE3_m2, .QBE4_m2{
+    border: 2px solid red;
+    margin: 5px;
+    padding: 10px;
+    height: 100px;
+    width: 500px;
+}
+/*Tableau réponse*/
+.reponse1_m2, .reponse2_m2, .reponse3_m2, .reponse4_m2 {
+    border: 2px solid green;
+    margin: 5px;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Bordure intérieure du tableau réponse */
+.reponse1_m2 tr th,.reponse1_m2 tr td, .reponse2_m2 tr th, .reponse2_m2 tr td, .reponse3_m2 tr th, .reponse3_m2 tr td, .reponse4_m2 tr th, .reponse4_m2 tr td{
+    border: 1px solid black;
+}
+
+/**************************FIN de la Mission 2 ************************************/
+
+/***************DEBUT de Mission 3***************/
+.mission3 h1 { /* Style de base de la page web pour le titre*/
+    font-family : "Agency FB";
+    text-decoration: underline;
+    text-align : center;
+    font-size : 70px;
+    margin : 100px 0 0 0;
+}
+
+.mission3 .mission3_intro{
+	position: relative;
+    padding-right: 500px;
+    margin : 50px 0 0 25px;
+    border : 5px solid blue;
+	
+}
+
+/***************FIN de Mission 3***************/
+
+
+/*************************DEBUT de Bilan de rapport************************/
+/* Modification du texte "Bilan de rapport" qui fonctionne comme titre (centré,souligné et plus grand) */
+.bilan_rapport h1 {
+    font-family : "Agency FB";
+    text-decoration: underline darkolivegreen;
+    text-align : center;
+    font-size : 70px;
+    margin : 100px 0 0 0;
+}
+
+/* Modification du texte présent dans les paragraphes 1,2,3 et 4 (plus petit que le "titre" de la page) */
+.bilan_rapport p{
+    font-family : Consolas;
+    font-size : 20px;
+    margin : 50px 0 0 25px;
+}
+
+.bilan_rapport u{ /* Couleur de texte rouge pour tous les textes soulignés dans le rapport de bilan */
+    color : red;
+}
+
+/* Modification du texte du paragraphe 1, padding-right pour laisser suffisament d'espace à droite pour l'image html_css et contour bleu */
+.bilan_rapport .paragraphe_1{
+    position: relative;
+    padding-right: 500px;
+    margin : 50px 25px 0 25px;
+    border : 5px solid blue;
+}
+
+/* Modification du texte du paragraphe 2, padding-left pour laisser suffisament d'espace à gauche pour l'image sql et contour vert */
+.bilan_rapport .paragraphe_2{
+    position: relative;
+    padding-left: 500px;
+    margin : 100px 50px 100px 50px;
+    border : 5px solid green;
+}
+
+/* Modification du texte du paragraphe 3, contour orange et texte plus centré */
+.bilan_rapport .paragraphe_3{
+    margin : 0 100px 130px 100px;
+    border : 5px solid orange;
+}
+
+/* Modification du texte du paragraphe 4, contour rouge et texte centré comme le paragraphe 3 */
+.bilan_rapport .paragraphe_4{
+    margin : 0 100px 0px 100px;
+    border : 5px solid red;
+}
+
+/*  Position absolute pour les deux images pour leur permettre un placement arbitraire */
+.bilan_rapport .couple_image {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    width: 350px;
+    height: 352px;
+}
+
+/* Dans la class couple_image, le first-child, son premier enfant correspond à l'image html_css */
+.couple_image img:first-child{
+    width: 290px;
+    height: 174px;
+    position: absolute; /* Position absolute pour permettre un placement arbitraire */
+    top: 370px;
+    right: 50px;
+}
+
+/* Modification de l'affichage du dernier enfant de la class couple_image qui correspond à l'image sql pour un ordinateur de bureau avec media screen */
+@media screen and (min-width : 1200px){
+    .couple_image img:last-child{
+        width: 290px;
+        height: 300px;
+        position: absolute; /* Position absolute pour permettre un placement arbitraire */
+        top: 660px; /* Modification du placement */
+        right : 1350px;
+    }
+}
+
+/* Modification de l'affichage du dernier enfant de la class couple_image qui correspond à l'image sql pour un ordinateur portable avec media screen */
+@media screen and (max-width : 1200px){
+    .couple_image img:last-child{
+        width: 290px;
+        height: 300px;
+        position: absolute; /* Position absolute pour permettre un placement arbitraire */
+        top: 1100px; /* Modification du placement */
+        right : 550px;
+    }
+}
+
+/* Modification du titre du tableau des améliorations possibles */
+.bilan_rapport caption{
+    font-family : "Agency FB";
+    text-decoration: underline darkolivegreen;
+    text-align : center;
+    font-size : 70px;
+    margin : 100px 0 70px 0;
+}
+
+/* Modification du texte du nom des colonnes */
+.bilan_rapport th{
+    font-family : "Agency FB";
+    color : red;
+    font-size : 50px;
+    text-align : center;
+}
+
+/* Modification de la taille et des propriétes du contenu du tableau */
+.bilan_rapport td{
+    font-size : 30px;
+    word-break: break-all; /* word-break : break-all permet aux mots de revenir à la ligne sans trop élargir la taille du tableau malgré la taille du conséquente du texte */
+}
+
+/* Délimitation du tableau */
+.tableau_amelioration td , .tableau_amelioration th{
+    border : 2px solid black; /* Créer la bordure du tableau en noir */
+    background-color: darkseagreen;
+    border-radius : 10px; /* "Arrondi" les coins du tableau */
+}
+th,td{
+    padding: 30px; /* On place le texte du nom des colonnes et le texte du contenu du tableau au centre de ce dernier */
+}
+.bilan_rapport table{
+    width : 70%; /* On élargit puis on centre le tableau */
+    margin : 100px 0 300px 300px;
+}
+/*************************FIN de Bilan de rapport**************************/
+
+/*************************DEBUT de Pied de page**************************/
+footer {
+    background-color: #2b6f29;
+    padding: 0;
+    margin-top: auto;
+    width: 100%;
+}
+
+.bloc_reseau {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.bloc_reseau p {
+    font-size: 1.4em;
+    font-weight: bold;
     color: white;
 }
-.tableau_difference tr {
-    background-color: #e6f2ff;
+
+.bloc_reseau ul a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #F1F1F1;
 }
 
+.bloc_reseau ul a:hover {
+    color: black;
+}
+
+hr {
+    border: 1px solid #fff;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+.droits_conditions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.droits_conditions p {
+    color: white;
+    margin-left: 50px;
+}
+/*********************FIN de Pied de page***************************/
