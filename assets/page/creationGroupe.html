@@ -1,122 +1,125 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
   <title>Machine Virtuelle</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
 </head>
 <body>
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <!-- Logo à gauche -->
-    <a class="navbar-brand" href="#">
-      <img src="../image/virtualbox_logo.png" alt="Logo"> <!-- Remplacez ce lien par l'URL de votre logo -->
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <!-- Menu Déroulant 1 : Intro -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="../../index.html"  role="button">
-            Introduction au travail
-          </a>
-        </li>
-        <!-- Menu Déroulant 2 : Création MV -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="creationMV.html" role="button">
-            Création MV
-          </a>
-        </li>
-        <!-- Menu Déroulant 3 : Utilisation MV -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="utilisationMV.html" role="button">
-            Utilisation MV
-          </a>
-        </li>
-        <!-- Menu Déroulant 4 : Déploiement -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDeploiement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Déploiement
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownDeploiement">
-            <li><a class="dropdown-item" href="plateforme.html">Choix d'une plateforme</a></li>
-            <li><a class="dropdown-item" href="mettre-en-ligne.html">Mettre en ligne</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Scripts Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@"></script>
-<div class="creation_utilisateurs">
-  <h1>Création d’un groupe BinomeYY. :</h1>
-  <img src="../image/screen_creation_groupe.PNG" alt="configVirtualBox" height="479" width="705">
-  <p>
-    Pour vérifier que le groupe a été créé, on utilise la commande suivante :
-  </p>
-  <img src="../image/screen_creation_groupe2.PNG" alt="configVirtualBox" height="483" width="729">
-
-  <p>
-    <br>On ajoute Binome01_1 et Binome02_2 au groupe Binome01, utilisez la commande usermod :
-  </p>
-  <img src="../image/screen_creation_groupe3.PNG" alt="configVirtualBox" height="486" width="723">
-  <br>
-  <img src="../image/screen_creation_groupe4.PNG" alt="configVirtualBox" height="487" width="734">
-  <br>
-  <img src="../image/screen_creation_groupe5.PNG" alt="configVirtualBox" height="272" width="802">
-  <p>
-    <br>Affiche toutes les lignes du fichier /etc/group qui contiennent Binome01. Cela permet de vérifier les groupes dont Binome01 fait partie :
-  </p>
-
-  <p>
-    On vérifie encore :
-  </p>
-  <img src="../image/screen_creation_groupe6.PNG" alt="configVirtualBox" height="501" width="734">
-</div>
-<!-- Pied de page -->
-<footer class="bg-dark text-light py-4 mt-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <h1>Coordonnées</h1>
-        <p>
-          <a href="https://www.google.com/maps/search/?q=123+Rue+de+l'Entreprise,+75000+Paris,+France" target="_blank">123 Rue de l'Entreprise, 75000 Paris, France</a><br>
-          Téléphone : 01 23 45 67 89<br>
-          Email : <a href="mailto:info@entreprise.fr">info@entreprise.fr</a>
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h1>À propos</h1>
-        <p>
-          Ce site est réalisé par les étudiants de l'IUT de Paris : Afshar MOHAMED AJMALDEEN, Johann TIXIER, Dany LIM, Sarah XU
-        </p>
-      </div>
-      <div class="col-md-4">
-        <h5>Suivez-nous</h5>
-        <ul class="list-unstyled">
-          <li><a href="https://www.facebook.com/entreprise" target="_blank"><img src="assets/image/facebook.png" height = "50" width = "50" alt = "logo facebook"></a></li>
-          <li><a href="https://www.twitter.com/entreprise" target="_blank"><img src="assets/image/twitter.png" height = "50" width = "50" alt="logo X"></a></li>
-          <li><a href="https://www.instagram.com/entreprise" target="_blank"><img src="assets/image/instagram.png" height = "50" width = "50" alt="logo Insta"></a></li>
-          <li><a href="https://www.linkedin.com/company/entreprise" target="_blank"><img src="assets/image/linkedin.png" height = "50" width = "50" alt="logo linkdin"></a></li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Logo à gauche -->
+      <a class="navbar-brand" href="#">
+        <img src="../image/virtualbox_logo.png" alt="Logo"> <!-- Remplacez ce lien par l'URL de votre logo -->
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- Lien simple vers Introduction -->
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">
+              Introduction au travail
+            </a>
+          </li>
+          <!-- Lien simple vers Création MV -->
+          <li class="nav-item">
+            <a class="nav-link" href="creationMV.html">
+              Création MV
+            </a>
+          </li>
+          <!-- Menu déroulant Utilisation MV -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtilisation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Utilisation MV
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownUtilisation">
+              <li><a class="dropdown-item" href="creationAdmin.html">Création administrateur</a></li>
+              <li><a class="dropdown-item" href="creationUtilisateurs.html">Création d'utilisateurs</a></li>
+              <li><a class="dropdown-item" href="creationGroupe.html">Création groupe</a></li>
+              <li><a class="dropdown-item" href="personnalisationPrompt.html">Personnalisation Prompt</a></li>
+            </ul>
+          </li>
+          <!-- Lien simple vers Déploiement -->
+          <li class="nav-item">
+            <a class="nav-link" href="assets/page/deploiement.html">
+              Déploiement MV
+            </a>
+          </li>
         </ul>
       </div>
     </div>
-    <hr class="border-light">
-    <div class="text-center">
-      <p>&copy; 2025 Mon Site Web. Tous droits réservés.</p>
-    </div>
-  </div>
-</footer>
+  </nav>
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@"></script>
+  <div class="creation_utilisateurs">
+    <h1>Création d’un groupe BinomeYY. :</h1>
+    <img src="../image/screen_creation_groupe.PNG" alt="configVirtualBox">
+    <p>
+      Pour vérifier que le groupe a été créé, on utilise la commande suivante :
+    </p>
+    <img src="../image/screen_creation_groupe2.PNG" alt="configVirtualBox">
 
-<!-- Scripts Bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <p>
+      <br>On ajoute Binome01_1 et Binome02_2 au groupe Binome01, utilisez la commande usermod :
+    </p>
+    <img src="../image/screen_creation_groupe3.PNG" alt="configVirtualBox">
+    <br>
+    <img src="../image/screen_creation_groupe4.PNG" alt="configVirtualBox">
+    <br>
+    <img src="../image/screen_creation_groupe5.PNG" alt="configVirtualBox">
+    <p>
+      <br>Affiche toutes les lignes du fichier /etc/group qui contiennent Binome01. Cela permet de vérifier les groupes dont Binome01 fait partie :
+    </p>
+
+    <p>
+      On vérifie encore :
+    </p>
+    <img src="../image/screen_creation_groupe6.PNG" alt="configVirtualBox">
+  </div>
+  <!-- Pied de page -->
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>Coordonnées</h1>
+          <p>
+            <a href="https://www.google.com/maps/search/?q=123+Rue+de+l'Entreprise,+75000+Paris,+France" target="_blank">123 Rue de l'Entreprise, 75000 Paris, France</a><br>
+            Téléphone : 01 23 45 67 89<br>
+            Email : <a href="mailto:info@entreprise.fr">info@entreprise.fr</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h1>À propos</h1>
+          <p>
+            Ce site est réalisé par les étudiants de l'IUT de Paris : Afshar MOHAMED AJMALDEEN, Johann TIXIER, Dany LIM, Sarah XU
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5>Suivez-nous</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/entreprise" target="_blank"><img src="assets/image/facebook.png" height = "50" width = "50" alt = "logo facebook"></a></li>
+            <li><a href="https://www.twitter.com/entreprise" target="_blank"><img src="assets/image/twitter.png" height = "50" width = "50" alt="logo X"></a></li>
+            <li><a href="https://www.instagram.com/entreprise" target="_blank"><img src="assets/image/instagram.png" height = "50" width = "50" alt="logo Insta"></a></li>
+            <li><a href="https://www.linkedin.com/company/entreprise" target="_blank"><img src="assets/image/linkedin.png" height = "50" width = "50" alt="logo linkdin"></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-light">
+      <div class="text-center">
+        <p>&copy; 2025 Mon Site Web. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
