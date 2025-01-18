@@ -1,12 +1,16 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
   <title>Machine Virtuelle</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
 </head>
 <body>
   <!-- Navbar -->
@@ -16,38 +20,37 @@
       <a class="navbar-brand" href="#">
         <img src="../image/virtualbox_logo.png" alt="Logo"> <!-- Remplacez ce lien par l'URL de votre logo -->
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <!-- Menu Déroulant 1 : Intro -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="../../index.html"  role="button">
+          <!-- Lien simple vers Introduction -->
+          <li class="nav-item">
+            <a class="nav-link" href="../../index.html">
               Introduction au travail
             </a>
           </li>
-          <!-- Menu Déroulant 2 : Création MV -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="creationMV.html" role="button">
+          <!-- Lien simple vers Création MV -->
+          <li class="nav-item">
+            <a class="nav-link" href="creationMV.html">
               Création MV
             </a>
           </li>
-          <!-- Menu Déroulant 3 : Utilisation MV -->
+          <!-- Menu déroulant Utilisation MV -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="utilisationMV.html" role="button">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUtilisation" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Utilisation MV
             </a>
-          </li>
-          <!-- Menu Déroulant 4 : Déploiement -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDeploiement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Déploiement
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownDeploiement">
-              <li><a class="dropdown-item" href="plateforme.html">Choix d'une plateforme</a></li>
-              <li><a class="dropdown-item" href="mettre-en-ligne.html">Mettre en ligne</a></li>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownUtilisation">
+              <li><a class="dropdown-item" href="creationAdmin.html">Création administrateur</a></li>
+              <li><a class="dropdown-item" href="creationUtilisateurs.html">Création d'utilisateurs</a></li>
+              <li><a class="dropdown-item" href="creationGroupe.html">Création groupe</a></li>
+              <li><a class="dropdown-item" href="personnalisationPrompt.html">Personnalisation Prompt</a></li>
             </ul>
+          </li>
+          <!-- Lien simple vers Déploiement -->
+          <li class="nav-item">
+            <a class="nav-link" href="assets/page/deploiement.html">
+              Déploiement MV
+            </a>
           </li>
         </ul>
       </div>
@@ -60,7 +63,7 @@
     <p>
       Tapez dans la barre de recherche d’un navigateur "VirtualBox".
     </p>
-    <img src="../image/screen_site_VirtualBox.PNG" alt="Site_VirtualBox" height="352" width="1132">
+    <img src="../image/screen_site_VirtualBox.PNG">
     <p>
       Une fois arrivé sur cette page, cliquez sur download pour télécharger la dernière version de Virtualbox
     </p>
@@ -68,22 +71,22 @@
     <p>
       <br>Après avoir cliqué sur download, sélectionnez le package en fonction du système d’exploitation de votre PC.
     </p>
-    <img src="../image/screen_site_VirtualBox2.PNG" alt="Site_VirtualBox" height="478" width="902">
+    <img src="../image/screen_site_VirtualBox2.PNG" alt="Site_VirtualBox">
 
     <p>
       <br>Cliquez sur l'exécutable Virtualbox téléchargé.
     </p>
-    <img src="../image/screen_exeVirtualBox.PNG" alt="exeVirtualBox" height="154" width="593">
+    <img src="../image/screen_exeVirtualBox.PNG" alt="exeVirtualBox">
 
     <p>
       <br>Cliquez sur oui pour autoriser l’application à apporter des modifications à votre appareil.
     </p>
-    <img src="../image/screen_autorisationVirtualBox.PNG" alt="autorisationVirtualBox" height="502" width="574">
+    <img src="../image/screen_autorisationVirtualBox.PNG" alt="autorisationVirtualBox">
 
     <p>
       <br>Cliquez sur suivant jusqu’à la page suivante :
     </p>
-    <img src="../image/screen_contratVirtualBox.PNG" alt="contratVirtualBox" height="586" width="726">
+    <img src="../image/screen_contratVirtualBox.PNG" alt="contratVirtualBox">
 
     <p>
       <br>Acceptez le contrat de licence de logiciel. Cliquez sur suivant.<br>
@@ -92,135 +95,135 @@
     <p>
       <br>Laissez le chemin d’accès proposé par défaut pour l’installation de la machine virtuelle.
     </p>
-    <img src="../image/screen_contratVirtualBox2.PNG" alt="contratVirtualBox" height="586" width="726">
+    <img src="../image/screen_contratVirtualBox2.PNG" alt="contratVirtualBox">
 
     <p>
       <br>Cliquez sur oui et suivant jusqu’à cette page :
     </p>
-    <img src="../image/screen_installerVirtualBox.PNG" alt="installerVirtualBox" height="586" width="726">
+    <img src="../image/screen_installerVirtualBox.PNG" alt="installerVirtualBox">
 
     <p>
       <br>Enfin, cliquez sur installer. Une fois fini, cliquez sur terminer.
     </p>
-    <img src="../image/screen_installerVirtualBox2.PNG" alt="installerVirtualBox" height="586" width="726">
+    <img src="../image/screen_installerVirtualBox2.PNG" alt="installerVirtualBox">
   </div>
   <div class="configuration_mv">
     <p>
       <br>Vous arriverez maintenant sur la page suivante :
     </p>
-    <img src="../image/screen_config_mv.PNG" alt="configVirtualBox" height="517" width="903">
+    <img src="../image/screen_config_mv.PNG" alt="configVirtualBox">
     <p>
       <br>Mettez le nom “Ubuntu”.
     </p>
-    <img src="../image/screen_config_mv2.PNG" alt="configVirtualBox" height="478" width="905">
+    <img src="../image/screen_config_mv2.PNG" alt="configVirtualBox">
 
     <p>
       <br>Choisissez le répertoire dans lequel se trouvera votre machine virtuelle.
     </p>
-    <img src="../image/screen_config_mv3.PNG" alt="configVirtualBox" height="479" width="902">
+    <img src="../image/screen_config_mv3.PNG" alt="configVirtualBox">
 
     <p>
       <br>Téléchargez le fichier ISO sur ubuntu.
     </p>
-    <img src="../image/screen_iso_ubuntu.PNG" alt="site_ubuntu" height="479" width="902">
+    <img src="../image/screen_iso_ubuntu.PNG" alt="site_ubuntu">
 
     <p>
       <br>Dans ISO image, mettez le fichier ISO téléchargé.
     </p>
-    <img src="../image/screen_iso_ubuntu2.PNG" alt="iso_ubuntu" height="497" width="902">
+    <img src="../image/screen_iso_ubuntu2.PNG" alt="iso_ubuntu">
 
     <p>
       <br>Et cochez la case “Skip Unattended Installation” et cliquez sur suivant pour l’installer de manière classique.
     </p>
-    <img src="../image/screen_config_mv4.PNG" alt="configVirtualBox" height="500" width="904">
+    <img src="../image/screen_config_mv4.PNG" alt="configVirtualBox">
 
     <p>
       <br>- Choisissez la quantité de mémoire vive et le nombre de coeurs selon vos capacités.
       <br>- S’il s’agit d’un nouvel OS cocher la case “Enable EPI”.
       <br>  Cliquez ensuite sur suivant.
     </p>
-    <img src="../image/screen_config_mv5.PNG" alt="configVirtualBox" height="488" width="896">
+    <img src="../image/screen_config_mv5.PNG" alt="configVirtualBox">
 
     <p>
       <br>Choisissez la quantité d’espace disque que vous voulez alloué à votre système ou laisser par défaut la valeur initiale.
       <br>Cliquez sur terminer.
     </p>
-    <img src="../image/screen_config_mv6.PNG" alt="configVirtualBox" height="461" width="839">
+    <img src="../image/screen_config_mv6.PNG" alt="configVirtualBox">
 
     <p>
       <br>Cliquez sur “Finish” une fois sur cette page de récapitulatif.
     </p>
-    <img src="../image/screen_config_mv7.PNG" alt="configVirtualBox" height="497" width="902">
+    <img src="../image/screen_config_mv7.PNG" alt="configVirtualBox">
 
     <p>
       <br>Allez ensuite dans “Configuration” puis “Affichage”.
       <br>Augmentez au maximum la mémoire vidéo et cochez la case “Activer l’accélération 3D” puis cochez “OK”.
       <br>Pensez à activer le mode expert.
     </p>
-    <img src="../image/screen_config_mv8.PNG" alt="configVirtualBox" height="503" width="883">
-    <img src="../image/screen_config_mv9.PNG" alt="configVirtualBox" height="517" width="902">
+    <img src="../image/screen_config_mv8.PNG" alt="configVirtualBox">
+    <img src="../image/screen_config_mv9.PNG" alt="configVirtualBox">
 
     <p>
       <br>Allez ensuite dans “Configuration” puis “Réseau” et changez le mode d’accès réseau à “Accès par pont” puis cochez “OK”
     </p>
-    <img src="../image/screen_config_mv10.PNG" alt="configVirtualBox" height="518" width="901">
+    <img src="../image/screen_config_mv10.PNG" alt="configVirtualBox">
 
     <p>
       <br>Cliquez ensuite sur “Afficher” pour lancer la machine virtuelle puis cliquez sur annuler quand le message suivant apparaît.
     </p>
-    <img src="../image/screen_config_mv11.PNG" alt="configVirtualBox" height="515" width="906">
-    <img src="../image/screen_config_mv12.PNG" alt="configVirtualBox" height="552" width="832">
+    <img src="../image/screen_config_mv11.PNG" alt="configVirtualBox">
+    <img src="../image/screen_config_mv12.PNG" alt="configVirtualBox">
     <p>
       <br>Sélectionner “Installer ubuntu” puis cliquer sur “suivant”.
     </p>
-    <img src="../image/screen_config_mv13.PNG" alt="configVirtualBox" height="588" width="849">
+    <img src="../image/screen_config_mv13.PNG" alt="configVirtualBox">
 
     <p>
       <br>Utilisez l'installation interactive afin d'être guidé de manière optimale dans l'installation de ubuntu et cliquez sur “Suivant”.
     </p>
-    <img src="../image/screen_config_mv14.PNG" alt="configVirtualBox" height="388" width="847">
+    <img src="../image/screen_config_mv14.PNG" alt="configVirtualBox">
 
     <p>
       <br>Sélectionnez l’installation par défaut puis cliquez sur “Suivant”.
     </p>
-    <img src="../image/screen_config_mv15.PNG" alt="configVirtualBox" height="480" width="761">
+    <img src="../image/screen_config_mv15.PNG" alt="configVirtualBox">
 
 
     <p>
       <br>Sélectionnez la case installation de logiciel tiers afin d’avoir accès au matériel graphique et wifi de votre ordinateur spécifique et cliquez sur “Suivant”.
     </p>
-    <img src="../image/screen_config_mv16.PNG" alt="configVirtualBox" height="523" width="718">
+    <img src="../image/screen_config_mv16.PNG" alt="configVirtualBox">
 
 
     <p>
       <br>Sélectionnez “Effacer le disque et installer Ubuntu” pour commencer avec une machine virtuelle vierge et cliquez sur “Suivant”.
     </p>
-    <img src="../image/screen_config_mv17.PNG" alt="configVirtualBox" height="519" width="736">
+    <img src="../image/screen_config_mv17.PNG" alt="configVirtualBox">
    .
     <p>
       <br>Entrez les données nécessaires à la création de votre compte et cliquez sur “Suivant”
     </p>
-    <img src="../image/screen_config_mv18.PNG" alt="configVirtualBox" height="523" width="802">
+    <img src="../image/screen_config_mv18.PNG" alt="configVirtualBox">
 
     <p>
       <br>-Sélectionnez le fuseau horaire de votre région.
     </p>
-    <img src="../image/screen_config_mv19.PNG" alt="configVirtualBox" height="601" width="804">
+    <img src="../image/screen_config_mv19.PNG" alt="configVirtualBox">
 
     <p>
       <br>Cliquez sur “Installer”.
     </p>
-    <img src="../image/screen_config_mv20.PNG" alt="configVirtualBox" height="641" width="900">
+    <img src="../image/screen_config_mv20.PNG" alt="configVirtualBox">
 
     <p>
       <br>Une installation devrait se lancer.
     </p>
-    <img src="../image/screen_config_mv21.PNG" alt="InstallationVirtualBox" height="471" width="729">
+    <img src="../image/screen_config_mv21.PNG" alt="InstallationVirtualBox">
 
     <p>
       <br>Puis enfin sélectionnez “Redémarrer maintenant”.
     </p>
-    <img src="../image/screen_config_mv22.PNG" alt="InstallationVirtualBox" height="450" width="798">
+    <img src="../image/screen_config_mv22.PNG" alt="InstallationVirtualBox">
     <p>
       <br>Ensuite le redémarrage devrait se lancer.
     </p>
@@ -228,12 +231,12 @@
     <p>
       <br>Puis pour terminer votre session va se lancer et vous devrez entrer le mot de passe sélectionné précédemment.
     </p>
-    <img src="../image/screen_config_mv23.PNG" alt="InstallationVirtualBox" height="558" width="839">
+    <img src="../image/screen_config_mv23.PNG" alt="InstallationVirtualBox">
 
     <p>
       <br>Puis, vous aurez accès à cette page qui est l’interface et qui montre la fin de l’installation de linux dans la machine virtuelle.
     </p>
-    <img src="../image/screen_config_mv24.PNG" alt="InstallationVirtualBoxReussie" height="563" width="903">
+    <img src="../image/screen_config_mv24.PNG" alt="InstallationVirtualBoxReussie">
   </div>
   <!-- Pied de page -->
   <footer class="bg-dark text-light py-4 mt-5">
@@ -271,8 +274,9 @@
   </footer>
 
   <!-- Scripts Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous"></script>
 </body>
 </html>
-
