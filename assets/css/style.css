@@ -1,53 +1,17 @@
-/* Placement de la barre de navigation qui fonctionne comme une grille */
-nav {
-    background-color: #87CEFA;
-    padding: 10px;
-    margin: 5px;
-    height : auto;
-    display: grid; /* Fonctionne désormais comme une grille */
-    text-align: center;
-    border-radius: 15px; /* "Arrondi" les coins de la barre de navigation */
-    grid-template-columns: auto auto auto;
+
+/* Style personnalisé */
+.nav-link {
+    font-size: 1.2rem;
 }
-
-/* Modification des textes présents dans les différents onglets de la nav (exemple : Accueil) */
-nav a {
-    color: white;
-    padding: 20px;
-    display: block;
-    text-decoration: none; /* Permet de retirer le soulignement du texte dû à la balise a */
+.navbar-nav {
+    flex-direction: row;
 }
-
-/* Modification du fonctionnement de la class menu */
-.menu{
-    position: relative;
-    display: inline-block; /* Permet de créer la barre de navigation sans faire dépasser le menu déroulant, créer une boite en ligne  */
+.nav-item {
+    margin-right: 20px;
 }
-
-nav .menu {
-    color : white;
-    display: block;
-    text-decoration: none; /* Permet de retirer le soulignement du texte dû à la balise a */
-}
-
-/* Modification du fonctionnement de contenu_menu qui permet la redirection vers les 3 missions */
-.contenu_menu {
-    display: none; /* Permet à la barre de navigation de fonctionner avec le hover */
-    position: absolute; /* Position absolute pour permettre un placement arbitraire */
-    background-color: grey;
-    min-width: 160px; /* Permet d'aggrandir la taille du menu déroulant */
-}
-
-
-
-/* Modification du fonctionnement du menu */
-.menu:hover .contenu_menu { /* Utilisation de la pseudo-class hover pour permettre l'effet de "survol" du menu */
-    display: block;
-}
-
-nav a:hover, .contenu_menu a:hover { /* Pour les onglets de la barre de navigation et les onglets du menu déroulant */
-    border-radius: 15px; /* "Arrondi" les coins de la zone de survol */
-    background-color: #e6f2ff; /* Change la couleur de l'intérieur de l'onglet quand ce dernier est survolé */
+.navbar-brand img {
+    width: 40px; /* Vous pouvez ajuster la taille de votre logo ici */
+    height: auto;
 }
 
 .presentation{
