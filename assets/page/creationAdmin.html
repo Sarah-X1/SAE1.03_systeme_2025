@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Machine Virtuelle</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <!-- Logo à gauche -->
+      <a class="navbar-brand" href="#">
+        <img src="../image/virtualbox_logo.png" alt="Logo"> <!-- Remplacez ce lien par l'URL de votre logo -->
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- Menu Déroulant 1 : Intro -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="../../index.html"  role="button">
+              Introduction au travail
+            </a>
+          </li>
+          <!-- Menu Déroulant 2 : Création MV -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="creationMV.html" role="button">
+              Création MV
+            </a>
+          </li>
+          <!-- Menu Déroulant 3 : Utilisation MV -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="utilisationMV.html" role="button">
+              Utilisation MV
+            </a>
+          </li>
+          <!-- Menu Déroulant 4 : Déploiement -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDeploiement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Déploiement
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownDeploiement">
+              <li><a class="dropdown-item" href="plateforme.html">Choix d'une plateforme</a></li>
+              <li><a class="dropdown-item" href="mettre-en-ligne.html">Mettre en ligne</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@"></script>
+  <div class="creation_admin">
+    <h1>Création d’un compte administrateur admin_GrXX_BinomeYY, XX et YY étant respectivement votre
+      numéro de groupe et de binôme :</h1>
+    <p>
+      Ouvrir le terminal dans la machine virtuelle : appuyez sur l'icône encadrée en rouge.
+    </p>
+    <img src="../image/screen_creation_util.PNG" alt="configVirtualBox" height="398" width="520">
+
+    <p>
+      <br>Puis sur le logiciel terminal :
+    </p>
+    <img src="../image/screen_creation_util2.PNG" alt="configVirtualBox" height="508" width="819">
+
+    <p>
+      <br>On crée un compte administrateur nommé admin_Gr10_Binome01 avec 10 et 01 étant respectivement notre numéro de groupe 110 et de binôme 1.
+    </p>
+    <img src="../image/screen_creation_admin.PNG" alt="configVirtualBox" height="203" width="900">
+    <p>
+      <br>La commande pour ajouter un nouvel utilisateur nommé "admin" au système, avec des privilèges administratifs.
+      Sécurité : Utiliser sudo est plus sécurisé que se connecter directement en tant que superutilisateur. Cela réduit
+      le risque d'erreurs ou de modifications indésirables, car vous n'êtes pas constamment dans un mode avec des
+      privilèges administratifs.<br>
+      Pratique : Vous n'avez pas besoin de connaître ou de saisir le mot de passe du compte root. Cela permet aux
+      administrateurs de gérer plus facilement les utilisateurs sans donner un accès complet à l'utilisateur "root".<br>
+    </p>
+
+    <p>
+      <br>On souhaite forcer la création de l'utilisateur avec un nom qui ne respecte pas les règles par défaut car dans la consigne : admin_Gr10_Binome01
+    </p>
+    <img src="../image/screen_creation_admin2.PNG" alt="configVirtualBox" height="464" width="900">
+
+    <p>
+      <br>On entre notre mot de passe :
+    </p>
+    <img src="../image/screen_creation_admin3.PNG" alt="configVirtualBox" height="460" width="904">
+
+    <p>
+      <br>On fait entrer :
+    </p>
+    <img src="../image/screen_creation_admin4.PNG" alt="configVirtualBox" height="642" width="904">
+
+    <p>
+      <br>On a ajouter l’utilisateur, pour lui accorder des droits administratifs, on ajoute l’utilisateur au groupe sudo :
+    </p>
+    <img src="../image/screen_creation_admin5.PNG" alt="configVirtualBox" height="634" width="898">
+
+    <p>
+      <br>Changer d’utilisateur : On se connecte avec le compte nouvellement créé :
+    </p>
+    <img src="../image/screen_creation_admin6.PNG" alt="configVirtualBox" height="634" width="903">
+    <img src="../image/screen_creation_admin7.PNG" alt="configVirtualBox" height="627" width="904">
+    <p>
+      Ainsi, on a créé un compte administrateur.<br>
+    </p>
+
+  </div>
+  <!-- Pied de page -->
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h1>Coordonnées</h1>
+          <p>
+            <a href="https://www.google.com/maps/search/?q=123+Rue+de+l'Entreprise,+75000+Paris,+France" target="_blank">123 Rue de l'Entreprise, 75000 Paris, France</a><br>
+            Téléphone : 01 23 45 67 89<br>
+            Email : <a href="mailto:info@entreprise.fr">info@entreprise.fr</a>
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h1>À propos</h1>
+          <p>
+            Ce site est réalisé par les étudiants de l'IUT de Paris : Afshar MOHAMED AJMALDEEN, Johann TIXIER, Dany LIM, Sarah XU
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h5>Suivez-nous</h5>
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/entreprise" target="_blank"><img src="assets/image/facebook.png" height = "50" width = "50" alt = "logo facebook"></a></li>
+            <li><a href="https://www.twitter.com/entreprise" target="_blank"><img src="assets/image/twitter.png" height = "50" width = "50" alt="logo X"></a></li>
+            <li><a href="https://www.instagram.com/entreprise" target="_blank"><img src="assets/image/instagram.png" height = "50" width = "50" alt="logo Insta"></a></li>
+            <li><a href="https://www.linkedin.com/company/entreprise" target="_blank"><img src="assets/image/linkedin.png" height = "50" width = "50" alt="logo linkdin"></a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-light">
+      <div class="text-center">
+        <p>&copy; 2025 Mon Site Web. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
