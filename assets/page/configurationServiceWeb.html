@@ -17,19 +17,19 @@
     <div class="container-fluid">
       <!-- Logo à gauche -->
       <a class="navbar-brand" href="#">
-        <img src="assets/image/virtualbox_logo.png" alt="Logo"> <!-- Remplacez ce lien par l'URL de votre logo -->
+        <img src="../image/virtualbox_logo.png" alt="Logo"> <!-- Remplacez ce lien par l'URL de votre logo -->
       </a>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <!-- Lien simple vers Introduction -->
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="../../index.html">
               Introduction au travail
             </a>
           </li>
           <!-- Lien simple vers Création MV -->
           <li class="nav-item">
-            <a class="nav-link" href="assets/page/creationMV.html">
+            <a class="nav-link" href="creationMV.html">
               Création MV
             </a>
           </li>
@@ -39,24 +39,28 @@
               Utilisation MV
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownUtilisation">
-              <li><a class="dropdown-item" href="assets/page/creationAdmin.html">Création administrateur</a></li>
-              <li><a class="dropdown-item" href="assets/page/creationUtilisateurs.html">Création d'utilisateurs</a></li>
-              <li><a class="dropdown-item" href="assets/page/creationGroupe.html">Création groupe</a></li>
-              <li><a class="dropdown-item" href="assets/page/personnalisationPrompt.html">Personnalisation Prompt</a></li>
+              <li><a class="dropdown-item" href="creationAdmin.html">Création administrateur</a></li>
+              <li><a class="dropdown-item" href="creationUtilisateurs.html">Création d'utilisateurs</a></li>
+              <li><a class="dropdown-item" href="creationGroupe.html">Création groupe</a></li>
+              <li><a class="dropdown-item" href="personnalisationPrompt.html">Personnalisation Prompt</a></li>
             </ul>
           </li>
-           <!-- Lien simple vers Déploiement -->
-          <li class="nav-item">
-            <a class="nav-link" href="assets/page/deploiement.html">
-              Déploiement MV
+          <!-- Menu déroulant vers Configuration et déploiement -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownDeploiement" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Configuration et Déploiement 
             </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownDeploiement">
+              <li><a class="dropdown-item" href="configurationServiceWeb.html">Configuration Service Web</a></li>
+              <li><a class="dropdown-item" href="WebStormPourDéploiement.html">WebStorm Pour le Déploiement</a></li>
+            </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
   
-  <div class="config">
+  <div class="deploiement">
     <p><br>Nous prenons connaissance de l’adresse ip de la machine : 192.168.1 correspond à l’adresse du réseau tandis que 108 correspond à l’adresse de la machine virtuelle.</p>
     <br><img src="../image/1.png" alt="configVirtualBox" height="398" width="520">
     <p>
@@ -353,16 +357,16 @@ sudo setfacl -bR /home/afshar .
         <div class="col-md-4">
           <h1>À propos</h1>
           <p>
-            Ce site est réalisé par les étudiants de l'IUT de Paris : Afshar MOHAMED AJMALDEEN, Johann TIXIER, Dany LIM, Sarah XU
+            Ce site est réalisé par les étudiants<br>de l'IUT de Paris Cité :<br>Afshar MOHAMED AJMALDEEN,<br>Johann TIXIER,<br>Dany LIM,<br>Sarah XU
           </p>
         </div>
         <div class="col-md-4">
           <h5>Suivez-nous</h5>
           <ul class="list-unstyled">
-            <li><a href="https://www.facebook.com/entreprise" target="_blank"><img src="assets/image/facebook.png" height = "50" width = "50" alt = "logo facebook"></a></li>
-            <li><a href="https://www.twitter.com/entreprise" target="_blank"><img src="assets/image/twitter.png" height = "50" width = "50" alt="logo X"></a></li>
-            <li><a href="https://www.instagram.com/entreprise" target="_blank"><img src="assets/image/instagram.png" height = "50" width = "50" alt="logo Insta"></a></li>
-            <li><a href="https://www.linkedin.com/company/entreprise" target="_blank"><img src="assets/image/linkedin.png" height = "50" width = "50" alt="logo linkdin"></a></li>
+            <li><a href="https://www.facebook.com/entreprise" target="_blank"><img src="../image/facebook.png" height = "50" width = "50" alt = "logo facebook"></a></li>
+            <li><a href="https://www.twitter.com/entreprise" target="_blank"><img src="../image/twitter.png" height = "50" width = "50" alt="logo X"></a></li>
+            <li><a href="https://www.instagram.com/entreprise" target="_blank"><img src="../image/instagram.png" height = "50" width = "50" alt="logo Insta"></a></li>
+            <li><a href="https://www.linkedin.com/company/entreprise" target="_blank"><img src="../image/linkedin.png" height = "50" width = "50" alt="logo linkdin"></a></li>
           </ul>
         </div>
       </div>
