@@ -104,44 +104,39 @@
   <div class="container mt-4">
   <!-- Tableau responsive -->
   <div class="table-responsive">
-    <table class="table table-bordered table-striped tableau_difference">
-      <caption class="text-center">Tableau des différences entre Emulateur, Simulateur et Outil de Virtualisation</caption>
-      <thead>
-        <tr>
-          <th>Concept</th>
-          <th>Emulateur</th>
-          <th>Simulateur</th>
-          <th>Outil de Virtualisation</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Rôle</td>
-          <td>Imiter le matériel</td>
-          <td>Reproduire le comportement</td>
-          <td>Isoler des environnements systèmes</td>
-        </tr>
-        <tr>
-          <td>Compatibilité</td>
-          <td>Permet d'exécuter des logiciels conçus pour un autre matériel/OS.</td>
-          <td>Utile pour tester des scénarios spécifiques.</td>
-          <td>Permet d'utiliser plusieurs systèmes comme si chaque système avait son propre ordinateur.</td>
-        </tr>
-        <tr>
-          <td>Exemples</td>
-          <td>QEMU, DOSBox, Wine...</td>
-          <td>Android Studio Emulator, Cisco Packet Tracer...</td>
-          <td>VirtualBox, VMware Workstation, Hyper-V...</td>
-        </tr>
-        <tr>
-          <td>Performance</td>
-          <td>Plus lent à cause de la simulation matérielle.</td>
-          <td>Rapide mais parfois peu précis.</td>
-          <td>Rapide grâce à l'utilisation directe du matériel.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <table class = tableau_difference>
+    <caption> Tableau des différences entre Emulateur, Simulateur et Outil de Virtualisation </caption>
+    <tr>
+      <th>Concept</th>
+      <th>Emulateur</th>
+      <th>Simulateur</th>
+      <th>Outil de Virtualisation</th>
+    </tr>
+    <tr>
+      <td>Rôle</td>
+      <td>Imiter le matériel</td>
+      <td>Reproduire le comportement</td>
+      <td>Isoler des environnements systèmes</td>
+    </tr>
+    <tr>
+      <td>Compatibilité</td>
+      <td>Permet d'exécuter des logiciels conçus pour un autre matériel/OS.</td>
+      <td>Utile pour tester des scénarios spécifiques.</td>
+      <td>Permet d'utiliser plusieurs systèmes comme si chaque système avait son propre ordinateur.</td>
+    </tr>
+    <tr>
+      <td>Exemples</td>
+      <td>QEMU, DOSBox,Wine...</td>
+      <td>Android Studio Emulator, Cisco Packet Tracer...</td>
+      <td>VirtualBox, VMware Workstation, Hyper-V...</td>
+    </tr>
+    <tr>
+      <td>Performance</td>
+      <td>Plus lent à cause de la simulation matérielle.</td>
+      <td>Rapide mais parfois peu précis.</td>
+      <td>Rapide grâce à l'utilisation directe du matériel.</td>
+    </tr>
+  </table>
 
   <section class="virtualisation-details mt-5 bg-light p-4 rounded shadow-sm">
     <div class="container">
