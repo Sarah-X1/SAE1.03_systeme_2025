@@ -76,23 +76,23 @@
     </div>
   </div>
   </div>
-  <div class="presentation">
+  <section class="presentation">
     <h1>Présentation du groupe :</h1>
     <p>Notre groupe est composé de Johann TIXIER ,Afshar MOHAMED AJMALDEEN, Sarah XU et Dany LIM du groupe 110.</p>
-  </div>
-  <div class="introduction_travail">
+  </section>
+  <section class="introduction_travail">
     <h1>Introduction à notre travail :</h1>
     <p>
       Dans le cadre de la <strong>SAÉ S1.03 "Installation d’un poste pour le développement"</strong>, nous avons réalisé ce site, le but
       étant de montrer comment nous avons <strong>administrer des systèmes informatiques en utilisant une machine virtuelle.</strong>
       Ce rapport retrace ainsi tout notre cheminement d'<strong>installation d'un environnement de virtualisation</strong> ainsi que
       d'installation du serveur web pour la mise en ligne du rapport de la SAE.</p>
-  </div>
-  <div class="diagrammeGantt">
+  </section>
+  <section class="diagrammeGantt">
     <h1>Diagramme de Gantt du travail de la période : </h1>
     <br><img src="assets/image/diagramme_gantt.png" alt="Diagramme de Gantt" class="img-fluid">
-  </div>
-  <div class="definition_virtualisation">
+  </section>
+  <section class="definition_virtualisation">
     <h1>Définition de la virtualisation : </h1>
     <p>
       La <strong>virtualisation</strong> est une technique qui permet <strong>d'exécuter plusieurs systèmes</strong> ou <strong>environnements virtuels sur un
@@ -100,80 +100,82 @@
       matériel de l'ordinateur et les systèmes virtuels, permettant d'optimiser l'utilisation des ressources
       matérielles. Cela offre une <strong>indépendance vis-à-vis du matériel</strong>, les systèmes virtuels peuvent ainsi fonctionner
       sur différentes configurations matérielles d’ordinateur, différents systèmes d’exploitation. </p>
-  </div>
+  </section>
   <!-- Tableau responsive -->
-  <div class="table-responsive">
+  <section class="table-responsive">
     <table class = tableau_difference>
     <caption> Tableau des différences entre Emulateur, Simulateur et Outil de Virtualisation </caption>
-    <tr>
-      <th>Concept</th>
-      <th>Emulateur</th>
-      <th>Simulateur</th>
-      <th>Outil de Virtualisation</th>
-    </tr>
-    <tr>
-      <td>Rôle</td>
-      <td>Imiter le matériel</td>
-      <td>Reproduire le comportement</td>
-      <td>Isoler des environnements systèmes</td>
-    </tr>
-    <tr>
-      <td>Compatibilité</td>
-      <td>Permet d'exécuter des logiciels conçus pour un autre matériel/OS.</td>
-      <td>Utile pour tester des scénarios spécifiques.</td>
-      <td>Permet d'utiliser plusieurs systèmes comme si chaque système avait son propre ordinateur.</td>
-    </tr>
-    <tr>
-      <td>Exemples</td>
-      <td>QEMU, DOSBox,Wine...</td>
-      <td>Android Studio Emulator, Cisco Packet Tracer...</td>
-      <td>VirtualBox, VMware Workstation, Hyper-V...</td>
-    </tr>
-    <tr>
-      <td>Performance</td>
-      <td>Plus lent à cause de la simulation matérielle.</td>
-      <td>Rapide mais parfois peu précis.</td>
-      <td>Rapide grâce à l'utilisation directe du matériel.</td>
-    </tr>
-  </table>
+      <tr>
+        <th>Concept</th>
+        <th>Emulateur</th>
+        <th>Simulateur</th>
+        <th>Outil de Virtualisation</th>
+      </tr>
+      <tr>
+        <td>Rôle</td>
+        <td>Imiter le matériel</td>
+        <td>Reproduire le comportement</td>
+        <td>Isoler des environnements systèmes</td>
+      </tr>
+      <tr>
+        <td>Compatibilité</td>
+        <td>Permet d'exécuter des logiciels conçus pour un autre matériel/OS.</td>
+        <td>Utile pour tester des scénarios spécifiques.</td>
+        <td>Permet d'utiliser plusieurs systèmes comme si chaque système avait son propre ordinateur.</td>
+      </tr>
+      <tr>
+        <td>Exemples</td>
+        <td>QEMU, DOSBox,Wine...</td>
+        <td>Android Studio Emulator, Cisco Packet Tracer...</td>
+        <td>VirtualBox, VMware Workstation, Hyper-V...</td>
+      </tr>
+      <tr>
+        <td>Performance</td>
+        <td>Plus lent à cause de la simulation matérielle.</td>
+        <td>Rapide mais parfois peu précis.</td>
+        <td>Rapide grâce à l'utilisation directe du matériel.</td>
+      </tr>
+    </table>
+  </section>
 
+  <section class="virtualisation-details mt-5 bg-light p-4 rounded shadow-sm">
+    <div class="container">
+      <!-- Section : Type de virtualisation -->
+      <div class="type_virtualisation">
+        <h2 class="text-primary mb-4">Type de virtualisation pour les environnements VirtualBox, VMware Workstation et Stratus :</h2>
   
-  <div class="container">
-    <!-- Section : Type de virtualisation -->
-    <div class="type_virtualisation">
-      <h2 class="text-primary mb-4">Type de virtualisation pour les environnements VirtualBox, VMware Workstation et Stratus :</h2>
-
-      <!-- Détails VirtualBox -->
-      <div class="type_VirtualBox mb-4">
-        <h3 class="text-secondary">VirtualBox :</h3>
-        <ul>
-          <li><strong>Type :</strong> Virtualisation <span class="text-danger">complète</span> (hyperviseur de type 2).</li>
-          <li>Fonctionne comme une application sur le système d’exploitation hôte, en utilisant les ressources de ce dernier pour exécuter des machines virtuelles.</li>
-          <li>Utilisé pour exécuter des systèmes d’exploitation (ex. : Windows, Linux) pour des class="text-danger">tests</span> ou du <span class="text-danger">développement</span>.</li>
-        </ul>
-      </div>
-
-      <!-- Détails Workstation -->
-      <div class="type_Workstation mb-4">
-        <h3 class="text-secondary">VMware Workstation :</h3>
-        <ul>
-          <li><strong>Type :</strong> Virtualisation <span class="text-danger">complète</span> (hyperviseur de type 2).</li>
-          <li>Basé sur un système d’exploitation hôte, similaire à VirtualBox.</li>
-          <li>Propose des <span class="text-danger">fonctionnalités avancées</span> pour les entreprises et les développeurs.</li>
-        </ul>
-      </div>
-
-      <!-- Détails Stratus -->
-      <div class="type_Stratus mb-4">
-        <h3 class="text-secondary">Stratus :</h3>
-        <ul>
-          <li><strong>Type :</strong> Virtualisation de <span class="text-danger">type 1</span> (bare-metal), avec des systèmes redondants et critiques.</li>
-          <li>Spécialisé dans la virtualisation tolérante aux pannes pour garantir une haute disponibilité.</li>
-          <li>Idéal pour des <span class="text-danger">environnements critiques où l’arrêt n’est pas tolérable</span>.</li>
-        </ul>
+        <!-- Détails VirtualBox -->
+        <div class="type_VirtualBox mb-4">
+          <h3 class="text-secondary">VirtualBox :</h3>
+          <ul>
+            <li><strong>Type :</strong> Virtualisation <span class="text-danger">complète</span> (hyperviseur de type 2).</li>
+            <li>Fonctionne comme une application sur le système d’exploitation hôte, en utilisant les ressources de ce dernier pour exécuter des machines virtuelles.</li>
+            <li>Utilisé pour exécuter des systèmes d’exploitation (ex. : Windows, Linux) pour des class="text-danger">tests</span> ou du <span class="text-danger">développement</span>.</li>
+          </ul>
+        </div>
+  
+        <!-- Détails Workstation -->
+        <div class="type_Workstation mb-4">
+          <h3 class="text-secondary">VMware Workstation :</h3>
+          <ul>
+            <li><strong>Type :</strong> Virtualisation <span class="text-danger">complète</span> (hyperviseur de type 2).</li>
+            <li>Basé sur un système d’exploitation hôte, similaire à VirtualBox.</li>
+            <li>Propose des <span class="text-danger">fonctionnalités avancées</span> pour les entreprises et les développeurs.</li>
+          </ul>
+        </div>
+  
+        <!-- Détails Stratus -->
+        <div class="type_Stratus mb-4">
+          <h3 class="text-secondary">Stratus :</h3>
+          <ul>
+            <li><strong>Type :</strong> Virtualisation de <span class="text-danger">type 1</span> (bare-metal), avec des systèmes redondants et critiques.</li>
+            <li>Spécialisé dans la virtualisation tolérante aux pannes pour garantir une haute disponibilité.</li>
+            <li>Idéal pour des <span class="text-danger">environnements critiques où l’arrêt n’est pas tolérable</span>.</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
   
   <div class="container">
