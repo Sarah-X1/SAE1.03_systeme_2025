@@ -63,206 +63,206 @@
   <div class="installation_mv">
     <h1>Installation et configuration d’un service web (Apache) : </h1>
     <p><br>Nous prenons connaissance de l’adresse ip de la machine : 192.168.1 correspond à l’adresse du réseau tandis que 108 correspond à l’adresse de la machine virtuelle.</p>
-    <br><img src="../image/1.png" alt="configVirtualBox" height="398" width="520">
+    <br><img src="../image/1.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->">
     <p>
       <br>Installer un serveur ssh si ce n’est pas déjà fait, “sudo apt install openssh-serve:” permet d’installer le service de ssh. Et entrer “O” ensuite pour continuer.
     </p>
-    <br><img src="../image/2.png" alt="configVirtualBox" height="508" width="819">
+    <br><img src="../image/2.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->">
     <p>
       <br>(optionnel -> facilite les manips)
     </p>
-    <br><img src="../image/3.png" alt="configVirtualBox" height="203" width="900">
+    <br><img src="../image/3.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->">
     <p>
       <br>On installe apache puis on entre “O” pour oui. Une fois l’installation terminée, le service web sera démarré dès la fin de l’installation.
     </p>
-    <br><img src="../image/4.png" alt="configVirtualBox" height="464" width="900">
+    <br><img src="../image/4.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Vous pourrez ensuite vérifier le bon fonctionnement de votre service web en tapant l’adresse ip de votre machine dans un navigateur.
     </p>
-    <br><img src="../image/5.png" alt="configVirtualBox" height="460" width="904">
+    <br><img src="../image/5.png" alt="configVirtualBox" class="img-fluid">
 
     <p>
       <br>On peut ainsi voir l’emplacement du fichier html. Sur le site, il est indiqué que le fichier est contenu dans le dossier var/www par défaut, il s’agit donc d’un fichier public.
 D’après la commande ls, le fichier est bien dans le dossier var.
 
     </p>
-    <br><img src="../image/6.png" alt="configVirtualBox" height="642" width="904">
+    <br><img src="../image/6.png" alt="configVirtualBox" class="img-fluid">
 
     <p>
       <br>On peut taper la commande “more /var/www/html/index.html” pour voir le contenu du fichier index.html.
     </p>
-    <br><img src="../image/7.png" alt="configVirtualBox" height="634" width="898">
+    <br><img src="../image/7.png" alt="configVirtualBox" class="img-fluid">
 
     <p>
       <br>Avec ls -l, on constate que l’on n’a pas les droits d’écriture et de modifications sur le fichier index.html, on souhaite régler ce problème.
     </p>
-    <br><img src="../image/8.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/8.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On crée un dossier monsite.fr dont l’on peut constater la création via la commande ll. (Ici, nous pouvons voir qu’elle affiche une erreur au niveau de la création du répertoire. Cela se produit car nous avons déjà créé au préalable le répertoire mais sinon le répertoire est censé se créer sans problème.)
     </p>
-    <br><img src="../image/9.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/9.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On se place dans le répertoire courant (monsite.fr).
       Puis on crée un fichier test.html dans lequel on écrit “Hello world ! “. 
       Cette manipulation permet de savoir si nous avons bien les droits d’écriture.
     </p>
-    <br><img src="../image/10.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/10.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Le but va être d’avoir un affichage fonctionnel sur la page test.html (qui n’est pas le cas pour l’instant).
     </p>
-    <br><img src="../image/11.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/11.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On peut voir que l’on retrouve le fichier 000-default.conf dans un lien en tapant la commande ls -l. 
       On modifie le fichier 000-default.conf avec sudo vi : 
     </p>
-    <br><img src="../image/12.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/12.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Il faut entrer le mot de passe pour y accéder.
     </p>
-    <br><img src="../image/13.png" alt="configVirtualBox" height="483" width="729">
+    <br><img src="../image/13.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Sur la ligne DocumentRoot, remplacer var/www/html par /home/nom_utilisateur/monsite.fr .
           Puis faites echap/esc, cela vous ramènera en mode commande puis entrer la commande “:wq” pour enregistrer les modifications et quitter le mode insertion.
     </p>
-    <br><img src="../image/14.png" alt="configVirtualBox" height="486" width="723">
+    <br><img src="../image/14.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Après avoir modifié le DocumentRoot, il faut l’actualiser avec la commande sudo systemctl reload apache2.service.
  
     </p>
-    <br><img src="../image/15.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/15.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Vous devriez ainsi avoir le texte ci-dessus sur le site.
     </p>
-    <br><img src="../image/16.png" alt="configVirtualBox" height="483" width="729">
+    <br><img src="../image/16.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On se place ensuite dans le dossier site-enabled en tant que répertoire courant 
       puis avec sudo ls on peut aller voir les fichiers d’apache2 (error.log qui nous intéresse plus particulièrement).
 
     </p>
-    <br><img src="../image/17.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/17.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On peut consulter le fichier error.log avec la commande ci-dessus pour constater que l’on a des problèmes de permissions sur le fichier.
 
     </p>
-    <br><img src="../image/18.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/18.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Il faut aller voir la configuration d’apache, et dans le dossier apache, 
       on affiche le fichier apache2.conf qu’ il va falloir consulter en tapant la commande sudo vi apache2.conf.
     </p>
-    <br><img src="../image/19.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/19.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Et, ce fichier contient l’ensemble des directives qui permet à apache de travailler.
     </p>
-    <br><img src="../image/20.png" alt="configVirtualBox" height="483" width="729">
+    <br><img src="../image/20.png" alt="configVirtualBox" class="img-fluid">
     <p>
       Il y a une directive sur le répertoire soit “Directory” en anglais. Cette directive nous indique que dans le fichier : 
       / (Fichier racine) : Nous avons aucun accès (“Require all denied)
       /var/www/ : Nous avons accès (“Require all granted”), PS: Ce qui nous permettait d’avoir la page par défaut
     </p>
-    <br><img src="../image/21.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/21.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Nous voulons avoir accès à /home/admin_Gr10_Binome01/monsite.fr/, alors, il faut copier la 
       directive /var/www/ puisque l’on a l’accès puis on modifie /var/www/ par admin_Gr10_Binome01 
       (pour notre cas) et on laisse les options par défaut. Puis, on enregistre.
       (Une fois modifier, appuyer sur echap et vous enregistrer et quitter en tapant “:wq”).
     </p>
-    <br><img src="../image/22.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/22.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On redémarre le système. On regarde si le site fonctionne: 
     </p>
-    <br><img src="../image/23.png" alt="configVirtualBox" height="483" width="729">
+    <br><img src="../image/23.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Dans notre cas, on a cet affichage, ce qui veut dire que le problème n’est pas totalement réglé.
     </p>
-    <br><img src="../image/24.png" alt="configVirtualBox" height="483" width="729">
+    <br><img src="../image/24.png" alt="configVirtualBox" class="img-fluid">
     <p>
       Comme, précédemment, il y'a écrit que dans le répertoire principal, nous n’avons pas les permissions, 
       alors il faut faire en sorte de regarder les permissions qui sont sur le répertoire principal. 
       Alors pour revenir dans le répertoire principale, on tape cd. 
     </p>
-    <br><img src="../image/25.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/25.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On tape la commande ls -l, pour voir l’ensemble des permissions. 
       On peut voir que les autres ont bien accès à la lecture et à l'exécution du fichier. 
     </p>
-    <br><img src="../image/26.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/26.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Sachant que nous avons l’ensemble des droits dans le fichier, le problème 
       ne vient donc pas de cet endroit mais certainement du répertoire parent. 
       Alors, pour aller vers le répertoire parent, soit le dossier home, on tape la commande cd .. .
       On tape la commande ls -l, pour voir les permissions : 
     </p>
-    <br><img src="../image/27.png" alt="configVirtualBox" height="483" width="729">
+    <br><img src="../image/27.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On peut voir que je n’ai pas d’accès. Alors, il faut faire en sorte d’avoir 
       les permissions manquantes dans le compte administrateur pour que l'affichage fonctionne bien. 
     </p>
-    <br><img src="../image/28.png" alt="configVirtualBox" height="483" width="729">
+    <br><img src="../image/28.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Pour avoir des informations précises sur le dossier, on tape, tout d’abord, 
       la commande: ls -ld /home/afshar/ . Cette commande permet de montrer les permissions 
       en tant qu’utilisateur.
 
     </p>
-    <br><img src="../image/29.png" alt="configVirtualBox" height="483" width="729">
+    <br><img src="../image/29.png" alt="configVirtualBox" class="img-fluid">
     <p>
       Ensuite, on tape la commande : sudo ls -ld /home/afshar/ . Cette commande permet de montrer les permissions pour le root.  
     </p>
-    <br><img src="../image/30.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/30.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Pour contourner certaines restrictions qui complexifie les tâches, 
       on passe en mode root avec la commande : sudo -i . 
       Ici, une fois en mode root, on tente de modifier les permissions et le propriétaire du dossier :
     </p>
-    <br><img src="../image/31.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/31.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On change le propriétaire avec la commande : chown -R afshar:afshar /home/afshar .
     </p>
-    <br><img src="../image/32.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/32.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On modifie les permissions avec la commande : chmod -R 777 /home/afshar . 
     </p>
-    <br><img src="../image/33.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/33.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Puis, on tape exit pour quitter le root. 
     </p>
-    <br><img src="../image/34.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/34.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On installe ACL en tapant la commande : sudo apt install acl . Les ACL (Access Control Lists) 
       peuvent restreindre l'accès, même si les permissions semblent correctes.
     </p>
-    <br><img src="../image/35.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/35.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On vérifie ACL sur le répertoire en tapant la commande : getfacl /home/afshar . 
     </p>
-    <br><img src="../image/36.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/36.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Si des ACL restrictives sont définies, on les réinitialise en tapant la commande : 
 sudo setfacl -bR /home/afshar .
     </p>
-    <br><img src="../image/37.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/37.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Certaines distributions Linux activent des politiques de sécurité avancées 
       qui pourraient bloquer l'accès. On vérifie d’abord si AppArmor est activé en tapant la commande : 
       sudo aa-status .
     </p>
-    <br><img src="../image/38.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/38.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On peut voir qu’en exécutant cette commande, elle nous indique bien que AppArmor est activé. 
     </p>
-    <br><img src="../image/39.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/39.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Afin de tester l’affichage, on désactive temporairement AppArmor en tapant la commande : sudo systemctl stop apparmor . 
     </p>
-    <br><img src="../image/40.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/40.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Puis, on retape la commande  ls -ld /home/afshar pour voir à nouveau les droits après les modifications.
     </p>
-    <br><img src="../image/41.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/41.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Après modification, on peut bien voir que l’utilisateur possède tous les droits pour l’affichage. 
     </p>
-    <br><img src="../image/42.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/42.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Ainsi, voici l’affichage attendu après le changement. 
     </p>
@@ -271,59 +271,59 @@ sudo setfacl -bR /home/afshar .
       <br>Dans le système Ubuntu, il y a un dossier par défaut nommé /srv dont le but est 
       de pouvoir stocker les différents services. Donc, on y accède en tapant la commande cd /srv .
     </p>
-    <br><img src="../image/44.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/44.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Ici, on fait un lien entre le dossier /srv et monsite.fr en tapant la commande : 
       sudo ln -s /home/admin_Gr_10_Binome01/monsite.fr/ monsite.fr
     </p>
-    <br><img src="../image/45.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/45.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On regarde le contenu du dossier /srv.  
 
     </p>
-    <br><img src="../image/46.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/46.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>En tapant la commande ll, on peut voir l’ensemble des informations du contenu du dossier /srv. 
       Ici, on peut notamment voir un lien symbolique monsite.fr qui pointe vers /home/admin_Gr_10_Binome01/monsite.fr/. 
       Ce lien est le lien que nous avons créer précédemment. 
 
     </p>
-    <br><img src="../image/47.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/47.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Ici, lorsque l’on tape la commande pwd, elle nous indique que nous sommes bien dans le répertoire /srv. 
       Nous on veut faire en sorte que monsite.fr s’affiche lors de la commande précedente.
       Alors, on va modifier la configuration : 
     </p>
-    <br><img src="../image/48.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/48.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On tape la commande, sudo vi /etc/apache2/sites-enabled/000-default.conf .
     </p>
-    <br><img src="../image/49.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/49.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On modifie /home/admin_Gr10_Binome01/monsite.fr par /srv/monsite.fr. 
     </p>
-    <br><img src="../image/50.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/50.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>j;fgvbgjvb ngjjcgj;f;jyftufcut;ftu;fltuftyfvtyvfktyvfhvf,hjgt
     </p>
-    <br><img src="../image/51.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/51.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Ici, on fait un lien entre le dossier /srv et monsite.fr en tapant la commande : 
       sudo ln -s /home/admin_Gr_10_Binome01/monsite.fr/ monsite.fr
     </p>
-    <br><img src="../image/45.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/45.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>On regarde le contenu du dossier /srv.  
 
     </p>
-    <br><img src="../image/46.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/46.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>En tapant la commande ll, on peut voir l’ensemble des informations du contenu du dossier /srv. 
       Ici, on peut notamment voir un lien symbolique monsite.fr qui pointe vers /home/admin_Gr_10_Binome01/monsite.fr/. 
       Ce lien est le lien que nous avons créer précédemment. 
 
     </p>
-    <br><img src="../image/47.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/47.png" alt="configVirtualBox" class="img-fluid">
     <p>
       <br>Ici, lorsque l’on tape la commande pwd, elle nous indique que nous sommes bien dans le répertoire /srv. 
       Nous on veut faire en sorte que monsite.fr s’affiche lors de la commande précedente.
