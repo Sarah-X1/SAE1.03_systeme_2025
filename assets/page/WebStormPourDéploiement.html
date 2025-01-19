@@ -18,8 +18,12 @@
     <div class="container-fluid">
       <!-- Logo à gauche -->
       <a class="navbar-brand" href="../../index.html">
-        <img src="../image/virtualbox_logo.png" alt="Logo"> <!-- Remplacez ce lien par l'URL de votre logo -->
+        <img src="../image/virtualbox_logo.png" alt="Logo" class="img-fluid"> <!-- Remplacez ce lien par l'URL de votre logo -->
       </a>
+      <!-- Bouton Toggle pour mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <!-- Lien simple vers Introduction -->
@@ -101,31 +105,194 @@
     </p>
     <br><img src="../image/50.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>j;fgvbgjvb ngjjcgj;f;jyftufcut;ftu;fltuftyfvtyvfktyvfhvf,hjgt
+      <br>Ensuite, on tape la commande : sudo vi /etc/apache2/apache2.conf pour pouvoir ajouter la directive.  
     </p>
     <br><img src="../image/51.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>Ici, on fait un lien entre le dossier /srv et monsite.fr en tapant la commande : 
-      sudo ln -s /home/admin_Gr_10_Binome01/monsite.fr/ monsite.fr
+      <br>La partie en rouge doit être supprimer, car cette directive n’est plus nécessaire 
+      et les # doivent être aussi supprimer pour que cette directive soit bien activée.  
     </p>
-    <br><img src="../image/45.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <br><img src="../image/52.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>On regarde le contenu du dossier /srv.  
+      <br>Après activation de la directive /srv. 
 
     </p>
-    <br><img src="../image/46.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <br><img src="../image/53.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>En tapant la commande ll, on peut voir l’ensemble des informations du contenu du dossier /srv. 
-      Ici, on peut notamment voir un lien symbolique monsite.fr qui pointe vers /home/admin_Gr_10_Binome01/monsite.fr/. 
-      Ce lien est le lien que nous avons créer précédemment. 
+      <br>On redémarre la page avec la commande : sudo systemctl reload apache2.service .
+      <br>Après, c’est manipulation on peut observer le comportement de notre site lorsque l’on ne précise pas de page : 
+    </p>
+    <br><img src="../image/54.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>On peut observer que le site se transforme en un gestionnaire de fichier. 
+    </p>
+    <br><img src="../image/55.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Nous allons simuler sur monsite.fr, la présence d’un autre répertoire. Alors, on se met dans le répertoire monsite.fr à l’aide de la commande cd.  
+    </p>
+    <br><img src="../image/56.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>On crée un répertoire nommé autre.  
+    </p>
+    <br><img src="../image/57.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Et, on copie le test dans notre répertoire autre. 
 
     </p>
-    <br><img src="../image/47.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <br><img src="../image/58.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>Ici, lorsque l’on tape la commande pwd, elle nous indique que nous sommes bien dans le répertoire /srv. 
-      Nous on veut faire en sorte que monsite.fr s’affiche lors de la commande précedente.
-      Alors, on va modifier la configuration : 
+      <br>Lorsque l’on recharge la page, on observe qu’on est capable de naviguer de directory en directory. 
+      Cela n’est pas ce que l’on veut.
+ 
     </p>
+    <br><img src="../image/59.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br> Pour enlever cela, on iva dans la configuration de la page en tapant la commande 
+      sudo vi /etc/apache2/apache2.conf . 
+    </p>
+    <br><img src="../image/60.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Ici, il faut supprimer cette configuration dans cette directive.  
+    </p>
+    <br><img src="../image/61.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Puis, on redémarre le système. 
+
+    </p>
+    <br><img src="../image/62.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Lorsque je ne précise pas de fichier, il nous affiche ce message . 
+      Cela est dû au fait qu’il nous force à avoir un fichier qui s’appelle index.html . 
+
+
+    </p>
+    <br><img src="../image/63.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>On renomme le fichier test.html en index.html . 
+
+    </p>
+    <br><img src="../image/64.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>On peut voir que cela affiche bien le contenu de test.html car on a modifié le nom par index.html, soit le nom par défaut. 
+      <br>Maintenant, il faut aller sur Webstorm. 
+ 
+    </p>
+    <br><img src="../image/65.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Il faut aller dans les 3 barres en haut à droite,   
+    </p>
+    <br><img src="../image/66.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Et, aller dans l’Onglet “tools”, 
+    </p>
+    <br><img src="../image/67.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Puis, cliquer sur “Deployement”
+
+    </p>
+    <br><img src="../image/68.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Et, ainsi, cliquer dans “configuration”.
+ 
+    </p>
+    <br><img src="../image/69.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br> Nous arrivons sur cette page.  
+    </p>
+    <br><img src="../image/70.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Ici, on clique sur SFTP. (On fait donc un new SFTP)   
+    </p>
+    <br><img src="../image/71.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Ici, on met le nom de notre serveur. Ici, on l’appelle admin_Gr10_Binome01.
+
+    </p>
+    <br><img src="../image/72.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Ici, on a besoin d’une configuration SSH. Donc, on clique sur les 3 petits points.  
+
+
+    </p>
+    <br><img src="../image/73.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Ici, on clique sur le plus pour bien configurer SSH. 
+
+    </p>
+    <br><img src="../image/74.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>L’hôte est soit l'adresse ip ou soit le nom de la machine. Ici, on l’appellera par l’adresse ip de la machine. 
+      Puis, il faut le nom d’utilisateur qui est pour nous admin_Gr10_Binome01. Et, il faut écrire le mot de passe sur la rubrique "Password". Puis, cliquer sur “Save password”. 
+      <br>Ainsi cliquez sur “Test Connection” pour vérifier si la configuration est opérationnelle.
+
+ 
+    </p>
+    <br><img src="../image/75.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Ce message indique que la configuration est bien opérationnelle. Ensuite, on clique sur ”OK” puis encore sur “OK” jusqu’à arriver sur cette page :    
+    </p>
+    <br><img src="../image/76.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Ici, on clique sur “Autodetect” pour voir si l’on a bien accès à la machine virtuelle et si c’est le cas, cela nous affichera le répertoire par défaut de l’utilisateur que j’ai utilisé. 
+    </p>
+    <br><img src="../image/77.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>On peut voir que dans notre cas, le répertoire par défaut de l’utilisateur que j’ai utilisé est /home/admin_Gr10_Binome01.
+      <br>Mais ici, ce qui nous intéresse, ce n’est pas d’aller dans la racine mais dans le répertoire monsite.fr.
+
+    </p>
+    <br><img src="../image/78.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Alors, ici on clique sur l'icône dossier, 
+ 
+    </p>
+    <br><img src="../image/79.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Et, on clique sur le répertoire monsite.fr , puis on clique sur “OK” une fois le répertoire sélectionné.
+    </p>
+    <br><img src="../image/80.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <p>
+      <br>Donc, le répertoire principal auquel je me connecterai sera /home/admin_Gr10_Binome01/monsite.fr .
+    <br><img src="../image/81.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+ 
+    </p>
+      <br>On clique sur l’onglet “Mappings”. 
+    </p>
+    <br><img src="../image/82.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Il faut indiquer que sa sera à la racine que les dossiers et fichiers du répertoire courant seront exploités de l’autre côté. Puis, on clique sur “OK”. 
+
+    </p>
+    <br><img src="../image/83.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Ensuite, on clique sur l’onglet “tools”, puis sur “Deployment”, et on vérifie si “Automatic upload” est coché.   
+    </p>
+    <br><img src="../image/84.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Il faut aller dans la page “Remote Host” qui est l’état de connexion du serveur. Ici, on choisit admin_Gr10_Binome01. 
+
+
+    </p>
+    <br><img src="../image/85.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>On clique droit sur le fichier qui contient l’ensemble des fichiers html et css, puis on clique sur “Deployment”, puis sur “upload to” le nom de notre serveur soit pour nous admin_Gr10_Binome01.     
+    </p>
+    <br><img src="../image/86.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Et, on clique sur “Yes”. 
+    </p>
+    <br><img src="../image/87.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Lorsque que l’on clique sur les flèche, cet onglet s’ouvre et nous indique que tous les fichiers ont bien été envoyés. 
+
+    </p>
+    <br><img src="../image/88.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <p>
+      <br>Lorsque l’on actualise la page de la machine, on peut voir que l’on a bien le bon affichage que l’on attendait, soit le site que nous cherchions à mettre dans la machine.  
+ 
+    </p>
+    
   </div>
     <!-- Pied de page -->
   <footer class="bg-dark text-light py-4 mt-5">
