@@ -63,83 +63,70 @@
   
   <div class="installation_mv">
     <h1>Configuration de WebStorm pour le déploiement</h1>
-    <br><img src="../image/43.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/43.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Dans le système Ubuntu, il y a un dossier par défaut nommé /srv dont le but est 
       de pouvoir stocker les différents services. Donc, on y accède en tapant la commande cd /srv .
     </p>
-    <br><img src="../image/44.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/44.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Ici, on fait un lien entre le dossier /srv et monsite.fr en tapant la commande : 
       sudo ln -s /home/admin_Gr_10_Binome01/monsite.fr/ monsite.fr
     </p>
-    <br><img src="../image/45.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/45.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>On regarde le contenu du dossier /srv.  
 
     </p>
-    <br><img src="../image/46.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/46.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>En tapant la commande ll, on peut voir l’ensemble des informations du contenu du dossier /srv. 
       Ici, on peut notamment voir un lien symbolique monsite.fr qui pointe vers /home/admin_Gr_10_Binome01/monsite.fr/. 
       Ce lien est le lien que nous avons créer précédemment. 
 
     </p>
-    <br><img src="../image/47.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/47.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Ici, lorsque l’on tape la commande pwd, elle nous indique que nous sommes bien dans le répertoire /srv. 
       Nous on veut faire en sorte que monsite.fr s’affiche lors de la commande précedente.
       Alors, on va modifier la configuration : 
     </p>
-    <br><img src="../image/48.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/48.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>On tape la commande, sudo vi /etc/apache2/sites-enabled/000-default.conf .
     </p>
-    <br><img src="../image/49.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/49.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>On modifie /home/admin_Gr10_Binome01/monsite.fr par /srv/monsite.fr. 
     </p>
-    <br><img src="../image/50.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/50.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>j;fgvbgjvb ngjjcgj;f;jyftufcut;ftu;fltuftyfvtyvfktyvfhvf,hjgt
     </p>
-    <br><img src="../image/51.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/51.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Ici, on fait un lien entre le dossier /srv et monsite.fr en tapant la commande : 
       sudo ln -s /home/admin_Gr_10_Binome01/monsite.fr/ monsite.fr
     </p>
-    <br><img src="../image/45.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/45.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>On regarde le contenu du dossier /srv.  
 
     </p>
-    <br><img src="../image/46.png" alt="configVirtualBox" height="627" width="904">
+    <br><img src="../image/46.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>En tapant la commande ll, on peut voir l’ensemble des informations du contenu du dossier /srv. 
       Ici, on peut notamment voir un lien symbolique monsite.fr qui pointe vers /home/admin_Gr_10_Binome01/monsite.fr/. 
       Ce lien est le lien que nous avons créer précédemment. 
 
     </p>
-    <br><img src="../image/47.png" alt="configVirtualBox" height="634" width="903">
+    <br><img src="../image/47.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Ici, lorsque l’on tape la commande pwd, elle nous indique que nous sommes bien dans le répertoire /srv. 
       Nous on veut faire en sorte que monsite.fr s’affiche lors de la commande précedente.
       Alors, on va modifier la configuration : 
     </p>
-    
-
-    
-      
-    
-  
-      
-
-
   </div>
-
-
-
-
     <!-- Pied de page -->
   <footer class="bg-dark text-light py-4 mt-5">
     <div class="container">
