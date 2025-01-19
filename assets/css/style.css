@@ -225,6 +225,7 @@
 }
 
 
-footer {
-width: 100%;
+.container-fluid, .row {
+  margin: 0;
+  padding: 0;
 }
