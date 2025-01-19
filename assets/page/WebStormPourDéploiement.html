@@ -80,44 +80,42 @@
     <br><img src="../image/45.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>On regarde le contenu du dossier /srv.  
-
     </p>
     <img src="../image/46.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>En tapant la commande ll, on peut voir l’ensemble des informations du contenu du dossier /srv. 
-      Ici, on peut notamment voir un lien symbolique monsite.fr qui pointe vers /home/admin_Gr_10_Binome01/monsite.fr/. 
+      <br>En tapant la commande ll, on peut voir l’ensemble des informations du contenu du dossier /srv.<br> 
+      Ici, on peut notamment voir un lien symbolique monsite.fr qui pointe vers /home/admin_Gr_10_Binome01/monsite.fr/.<br>
       Ce lien est le lien que nous avons créer précédemment. 
-
     </p>
     <br><img src="../image/47.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>Ici, lorsque l’on tape la commande pwd, elle nous indique que nous sommes bien dans le répertoire /srv. 
+      <Ici, lorsque l’on tape la commande pwd, elle nous indique que nous sommes bien dans le répertoire /srv. 
       Nous on veut faire en sorte que monsite.fr s’affiche lors de la commande précedente.
       Alors, on va modifier la configuration : 
     </p>
-    <br><img src="../image/48.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/48.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>On tape la commande, sudo vi /etc/apache2/sites-enabled/000-default.conf .
     </p>
-    <br><img src="../image/49.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/49.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>On modifie /home/admin_Gr10_Binome01/monsite.fr par /srv/monsite.fr. 
     </p>
-    <br><img src="../image/50.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/50.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Ensuite, on tape la commande : sudo vi /etc/apache2/apache2.conf pour pouvoir ajouter la directive.  
     </p>
-    <br><img src="../image/51.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/51.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>La partie en rouge doit être supprimer, car cette directive n’est plus nécessaire 
       et les # doivent être aussi supprimer pour que cette directive soit bien activée.  
     </p>
-    <br><img src="../image/52.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/52.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Après activation de la directive /srv. 
 
     </p>
-    <br><img src="../image/53.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/53.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>On redémarre la page avec la commande : sudo systemctl reload apache2.service .
       <br>Après, c’est manipulation on peut observer le comportement de notre site lorsque l’on ne précise pas de page : 
@@ -147,14 +145,14 @@
     </p>
     <br><img src="../image/59.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br> Pour enlever cela, on iva dans la configuration de la page en tapant la commande 
+      <br> Pour enlever cela, on va dans la configuration de la page en tapant la commande<br> 
       sudo vi /etc/apache2/apache2.conf . 
     </p>
-    <br><img src="../image/60.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/60.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Ici, il faut supprimer cette configuration dans cette directive.  
     </p>
-    <br><img src="../image/61.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/61.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>Puis, on redémarre le système. 
 
