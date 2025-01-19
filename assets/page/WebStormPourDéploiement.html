@@ -65,16 +65,16 @@
     </div>
   </nav>
   
-  <div class="installation_mv">
+  <section class="installation_mv">
     <h1>Configuration de WebStorm pour le déploiement</h1>
     <br><img src="../image/43.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>Dans le système Ubuntu, il y a un dossier par défaut nommé /srv dont le but est 
+      Dans le système Ubuntu, il y a un dossier par défaut nommé /srv dont le but est 
       de pouvoir stocker les différents services. Donc, on y accède en tapant la commande cd /srv .
     </p>
     <br><img src="../image/44.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
-      <br>Ici, on fait un lien entre le dossier /srv et monsite.fr en tapant la commande : 
+      Ici, on fait un lien entre le dossier /srv et monsite.fr en tapant la commande :<br>
       sudo ln -s /home/admin_Gr_10_Binome01/monsite.fr/ monsite.fr
     </p>
     <br><img src="../image/45.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
@@ -82,7 +82,7 @@
       <br>On regarde le contenu du dossier /srv.  
 
     </p>
-    <br><img src="../image/46.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
+    <img src="../image/46.png" alt="configVirtualBox" class="img-fluid"> <!-- Image responsive -->
     <p>
       <br>En tapant la commande ll, on peut voir l’ensemble des informations du contenu du dossier /srv. 
       Ici, on peut notamment voir un lien symbolique monsite.fr qui pointe vers /home/admin_Gr_10_Binome01/monsite.fr/. 
