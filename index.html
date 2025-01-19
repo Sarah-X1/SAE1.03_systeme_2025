@@ -97,78 +97,104 @@
       matérielles. Cela offre une indépendance vis-à-vis du matériel, les systèmes virtuels peuvent ainsi fonctionner
       sur différentes configurations matérielles d’ordinateur, différents systèmes d’exploitation. </p>
   </div>
-  <table class = tableau_difference>
-    <caption> Tableau des différences entre Emulateur, Simulateur et Outil de Virtualisation </caption>
-    <tr>
-      <th>Concept</th>
-      <th>Emulateur</th>
-      <th>Simulateur</th>
-      <th>Outil de Virtualisation</th>
-    </tr>
-    <tr>
-      <td>Rôle</td>
-      <td>Imiter le matériel</td>
-      <td>Reproduire le comportement</td>
-      <td>Isoler des environnements systèmes</td>
-    </tr>
-    <tr>
-      <td>Compatibilité</td>
-      <td>Permet d'exécuter des logiciels conçus pour un autre matériel/OS.</td>
-      <td>Utile pour tester des scénarios spécifiques.</td>
-      <td>Permet d'utiliser plusieurs systèmes comme si chaque système avait son propre ordinateur.</td>
-    </tr>
-    <tr>
-      <td>Exemples</td>
-      <td>QEMU, DOSBox,Wine...</td>
-      <td>Android Studio Emulator, Cisco Packet Tracer...</td>
-      <td>VirtualBox, VMware Workstation, Hyper-V...</td>
-    </tr>
-    <tr>
-      <td>Performance</td>
-      <td>Plus lent à cause de la simulation matérielle.</td>
-      <td>Rapide mais parfois peu précis.</td>
-      <td>Rapide grâce à l'utilisation directe du matériel.</td>
-    </tr>
-  </table>
-  <div class="type_virtualisation">
-    <h1>Type de virtualisation pour les environnements VirtualBox, VmWare Workstation et Stratus : </h1>
+  <div class="container mt-4">
+  <!-- Tableau responsive -->
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <caption class="text-center fw-bold">Tableau des différences entre Emulateur, Simulateur et Outil de Virtualisation</caption>
+      <thead class="table-dark">
+        <tr>
+          <th>Concept</th>
+          <th>Emulateur</th>
+          <th>Simulateur</th>
+          <th>Outil de Virtualisation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rôle</td>
+          <td>Imiter le matériel</td>
+          <td>Reproduire le comportement</td>
+          <td>Isoler des environnements systèmes</td>
+        </tr>
+        <tr>
+          <td>Compatibilité</td>
+          <td>Permet d'exécuter des logiciels conçus pour un autre matériel/OS.</td>
+          <td>Utile pour tester des scénarios spécifiques.</td>
+          <td>Permet d'utiliser plusieurs systèmes comme si chaque système avait son propre ordinateur.</td>
+        </tr>
+        <tr>
+          <td>Exemples</td>
+          <td>QEMU, DOSBox, Wine...</td>
+          <td>Android Studio Emulator, Cisco Packet Tracer...</td>
+          <td>VirtualBox, VMware Workstation, Hyper-V...</td>
+        </tr>
+        <tr>
+          <td>Performance</td>
+          <td>Plus lent à cause de la simulation matérielle.</td>
+          <td>Rapide mais parfois peu précis.</td>
+          <td>Rapide grâce à l'utilisation directe du matériel.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="type_VirtualBox">
-    <h1>VirtualBox : </h1>
-    <p>
-      -Type : Virtualisation complète (hyperviseur de type 2).<br>
-      -Fonctionne comme une application sur le système d’exploitation hôte. (utilise les ressources de ce système pour
-      exécuter des machines virtuelles).<br>
-      -Utilisé pour exécuter des systèmes d’exploitation (ex. : Windows, Linux) pour des tests ou du développement.
-    </p>
-  </div>
-  <div class="type_Workstation">
-    <h1>Workstation : </h1>
-    <p>
-      -Type : Virtualisation complète (hyperviseur de type 2).<br>
-      -également basé sur un système d’exploitation hôte.<br>
-      -Similaire à VirtualBox, mais propose des fonctionnalités avancées pour les entreprises et les développeurs
-    </p>
-  </div>
-  <div class="type_Stratus">
-    <h1>Stratus : </h1>
-    <p>
-      -Type : virtualisation de type 1 (bare-metal) avec des systèmes redondants et critiques. Virtualisation tolérante
-      aux pannes.<br>
-      -Spécialisé pour garantir une haute disponibilité, utilisé dans des environnements critiques où l'arrêt n’est pas
-      tolérable. vise à garantir une disponibilité continue pour des environnements nécessitant une fiabilité maximale.
-    </p>
-  </div>
-  <div class="forme_sauvegarde">
-    <h1>Forme/lieu de sauvegarde de la machine virtuelle créee : </h1>
-    <p class = "stockage_NAS">Sur un stockage réseau (NAS) : </p>
-    <p class = "avantage_NAS">
-      Avantages : Permet l'accès à la VM depuis plusieurs machines, centralisation, sécurité améliorée.
-      Inconvénients : Nécessite une bonne connexion réseau, peut être lent.
-      Pourquoi l’a t-on choisi : Pour un environnement collaboratif ou professionnel où la VM doit être accessible par
-      plusieurs utilisateurs.
-    <p/>
-  </div>
+
+  <section class="virtualisation-details mt-5 bg-light p-4 rounded shadow-sm">
+    <div class="container">
+      <!-- Section : Type de virtualisation -->
+      <div class="type_virtualisation">
+        <h2 class="text-primary mb-4">Type de virtualisation pour les environnements VirtualBox, VMware Workstation et Stratus :</h2>
+  
+        <!-- Détails VirtualBox -->
+        <div class="type_VirtualBox mb-4">
+          <h3 class="text-secondary">VirtualBox :</h3>
+          <ul>
+            <li><strong>Type :</strong> Virtualisation complète (hyperviseur de type 2).</li>
+            <li>Fonctionne comme une application sur le système d’exploitation hôte, en utilisant les ressources de ce dernier pour exécuter des machines virtuelles.</li>
+            <li>Utilisé pour exécuter des systèmes d’exploitation (ex. : Windows, Linux) pour des tests ou du développement.</li>
+          </ul>
+        </div>
+  
+        <!-- Détails Workstation -->
+        <div class="type_Workstation mb-4">
+          <h3 class="text-secondary">VMware Workstation :</h3>
+          <ul>
+            <li><strong>Type :</strong> Virtualisation complète (hyperviseur de type 2).</li>
+            <li>Basé sur un système d’exploitation hôte, similaire à VirtualBox.</li>
+            <li>Propose des fonctionnalités avancées pour les entreprises et les développeurs.</li>
+          </ul>
+        </div>
+  
+        <!-- Détails Stratus -->
+        <div class="type_Stratus mb-4">
+          <h3 class="text-secondary">Stratus :</h3>
+          <ul>
+            <li><strong>Type :</strong> Virtualisation de type 1 (bare-metal), avec des systèmes redondants et critiques.</li>
+            <li>Spécialisé dans la virtualisation tolérante aux pannes pour garantir une haute disponibilité.</li>
+            <li>Idéal pour des environnements critiques où l’arrêt n’est pas tolérable.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sauvegarde-details mt-5 bg-white p-4 rounded shadow-sm">
+    <div class="container">
+      <!-- Section : Forme et lieu de sauvegarde -->
+      <div class="forme_sauvegarde">
+        <h2 class="text-primary mb-4">Forme/Lieu de sauvegarde de la machine virtuelle créée :</h2>
+    
+        <!-- Sauvegarde sur NAS -->
+        <div class="stockage_NAS">
+          <h4>Sur un stockage réseau (NAS) :</h4>
+          <p><strong>Avantages :</strong> Permet l'accès à la VM depuis plusieurs machines, offre une centralisation et une sécurité améliorée.</p>
+          <p><strong>Inconvénients :</strong> Nécessite une bonne connexion réseau, peut entraîner une certaine lenteur.</p>
+          <p><strong>Pourquoi l’a-t-on choisi :</strong> Idéal pour un environnement collaboratif ou professionnel où la VM doit être accessible par plusieurs utilisateurs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Pied de page -->
   <footer class="bg-dark text-light py-4 mt-5">
     <div class="container">
